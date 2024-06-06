@@ -20,7 +20,7 @@ export default function Border({
     >
       <div
         className={cn(
-          "h-full w-full overflow-auto rounded-[20px] rounded-b-[10px] border bg-innerBg",
+          "h-full w-full overflow-auto rounded-[20px] rounded-b-[10px] bg-innerBg",
           styling?.innerClassName,
         )}
       >
