@@ -21,6 +21,7 @@
       "@/*": ["./src/*"],
       "@icons/*": ["./public/assets/icons/*"],
       "@constants/*": ["./src/constants/*"],
+      "@data/*": ["./public/data/*"],
       "@env/*": ["./env/*"]
     }
   },
