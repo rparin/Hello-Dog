@@ -1,13 +1,16 @@
 "use client";
-import { SEARCH_PLACEHOLDER } from "@constants/webInfo";
 import { ReactSearchAutocomplete } from "react-search-autocomplete";
 import { dogItem, dogBreedList } from "@data/DogBreedList";
 import { useRouter } from "next/navigation";
 
 export default function SearchAutoComplete({
   className,
+  placeholder,
+  autofocus,
 }: {
   className: string;
+  autofocus?: boolean;
+  placeholder?: string;
 }) {
   const router = useRouter();
   const handleOnSelect = (item: dogItem) => {
@@ -25,10 +28,10 @@ export default function SearchAutoComplete({
         boxShadow: "rgba(32, 33, 36, 0.28) 0px 1px 12px 0px",
         fontFamily: "Belanosima",
       }}
-      placeholder={SEARCH_PLACEHOLDER}
+      placeholder={placeholder}
       showIcon={false}
       maxResults={5}
-      autoFocus={true}
+      autoFocus={autofocus}
     />
   );
 }

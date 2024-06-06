@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { webLogo } from "@/constants/icons";
+import { SEARCH_PLACEHOLDER } from "@constants/webInfo";
 import Border from "@/components/Border";
 import SearchAutoComplete from "@/components/SearchAutoComplete";
 
@@ -17,7 +18,11 @@ export default function Home() {
               priority
             />
           </Link>
-          <SearchAutoComplete className="w-[75%] md:w-[50%] lg:w-[30%]" />
+          <SearchAutoComplete
+            className="w-[75%] md:w-[50%] lg:w-[30%]"
+            placeholder={SEARCH_PLACEHOLDER}
+            autofocus={true}
+          />
         </div>
       </Border>
     </>
