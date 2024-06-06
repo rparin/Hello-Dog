@@ -4,23 +4,21 @@ import { cn } from "@/lib/utils";
 
 export default function Footer(props: { className?: string }) {
   return (
-    <div
+    <section
       className={cn(
-        "z-50 mx-auto flex w-full flex-col items-center gap-2 py-2",
+        "z-50 mx-auto flex w-full items-center justify-center gap-0.5",
         props.className,
       )}
     >
-      <section className="flex">
-        <p className="text-xs line-clamp-1 overflow-auto">{CR}</p>
-        <a
-          href="https://rparin.github.io"
-          aria-label="External link to rparin portfolio website"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <ExternalLink className="h-[.7rem] w-auto" />
-        </a>
-      </section>
-    </div>
+      <p className="line-clamp-1 overflow-auto text-sm">{CR}</p>
+      <a
+        href="https://rparin.github.io"
+        aria-label="External link to rparin portfolio website"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <ExternalLink className="mb-2 h-[.7rem] w-auto" />
+      </a>
+    </section>
   );
 }

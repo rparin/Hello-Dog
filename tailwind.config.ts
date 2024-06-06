@@ -12,7 +12,8 @@ const config = {
   theme: {
     //Perfect Fourth
     fontSize: {
-      sm: "0.750rem",
+      xs: "0.750rem",
+      sm: "0.850rem",
       base: "1rem",
       xl: "1.333rem",
       "2xl": "1.777rem",

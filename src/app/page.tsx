@@ -67,7 +67,7 @@ export default function Home() {
             />
           </div>
         </div>
-        <Footer className="mt-1 text-black opacity-70" />
+        <Footer className="pt-3 text-black opacity-70" />
       </div>
     </>
   );
