@@ -20,6 +20,7 @@
     "paths": {
       "@/*": ["./src/*"],
       "@icons/*": ["./public/assets/icons/*"],
+      "@constants/*": ["./src/constants/*"],
       "@env/*": ["./env/*"]
     }
   },

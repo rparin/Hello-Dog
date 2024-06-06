@@ -1,7 +1,9 @@
 "use client";
-import { APP_NAME, SEARCH_PLACEHOLDER } from "@/constants";
+import { SEARCH_PLACEHOLDER } from "@constants/webInfo";
 import { ReactSearchAutocomplete } from "react-search-autocomplete";
 import Link from "next/link";
+import Image from "next/image";
+import { webLogo } from "@/constants/icons";
 
 export default function Home() {
   const items = [
@@ -37,9 +39,14 @@ export default function Home() {
       <div className="h-dvh w-dvw bg-muted">
         <div className="h-full w-full rounded-[45px] rounded-b-[50px] bg-border p-[25px] pb-[50px]">
           <div className="h-full w-full overflow-auto rounded-[20px] rounded-b-[10px] border bg-background">
-            <div className="flex h-[80vh] flex-col items-center justify-center text-center">
+            <div className="flex h-[60vh] flex-col items-center justify-center gap-3 text-center">
               <Link href={"/"}>
-                <h1 className="text-3xl md:text-5xl">{APP_NAME}</h1>
+                {/* <h1 className="text-3xl md:text-5xl">{APP_NAME}</h1> */}
+                <Image
+                  className="h-auto w-72 md:w-96"
+                  src={webLogo.img}
+                  alt={webLogo.alt}
+                />
               </Link>
               <ReactSearchAutocomplete
                 className="w-[75%] md:w-[50%] lg:w-[30%]"
@@ -52,6 +59,7 @@ export default function Home() {
                   border: "2.5px solid #FFD29D",
                   lineColor: "rgba(0,0,0,.35)",
                   boxShadow: "rgba(32, 33, 36, 0.28) 0px 1px 12px 0px",
+                  fontFamily: "Belanosima",
                 }}
                 placeholder={SEARCH_PLACEHOLDER}
                 showIcon={false}
