@@ -44,6 +44,7 @@ export default function Home() {
               className="h-auto w-72 md:w-96"
               src={webLogo.img}
               alt={webLogo.alt}
+              priority
             />
           </Link>
           <ReactSearchAutocomplete
