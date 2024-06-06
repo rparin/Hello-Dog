@@ -39,7 +39,7 @@ export default function Home() {
           <h1 className="text-3xl md:text-5xl">{APP_NAME}</h1>
         </Link>
         <ReactSearchAutocomplete
-          className="z-[80] w-[60%] md:w-[40%] lg:w-[30%]"
+          className="w-[75%] md:w-[50%] lg:w-[30%]"
           items={items}
           onSelect={handleOnSelect}
           // formatResult={(item: any) => {
@@ -48,7 +48,7 @@ export default function Home() {
           placeholder={SEARCH_PLACEHOLDER}
           showIcon={false}
           maxResults={5}
-          autoFocus={false}
+          autoFocus={true}
         />
       </div>
     </>
