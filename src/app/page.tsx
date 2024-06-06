@@ -4,6 +4,7 @@ import { ReactSearchAutocomplete } from "react-search-autocomplete";
 import Link from "next/link";
 import Image from "next/image";
 import { webLogo } from "@/constants/icons";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   const items = [
@@ -37,7 +38,7 @@ export default function Home() {
   return (
     <>
       <div className="h-dvh rounded-[45px] rounded-b-[50px] bg-border p-[25px] pb-[50px]">
-        <div className="bg-innerBg h-full w-full overflow-auto rounded-[20px] rounded-b-[10px] border">
+        <div className="h-full w-full overflow-auto rounded-[20px] rounded-b-[10px] border bg-innerBg">
           <div className="flex h-[60vh] flex-col items-center justify-center gap-3 text-center">
             <Link href={"/"}>
               <Image
@@ -66,6 +67,7 @@ export default function Home() {
             />
           </div>
         </div>
+        <Footer className="mt-1 text-black opacity-70" />
       </div>
     </>
   );
