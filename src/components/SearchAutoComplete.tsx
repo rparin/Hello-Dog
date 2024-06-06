@@ -1,47 +1,24 @@
 "use client";
 import { SEARCH_PLACEHOLDER } from "@constants/webInfo";
 import { ReactSearchAutocomplete } from "react-search-autocomplete";
+import { dogItem, dogBreedList } from "@data/DogBreedList";
+import { useRouter } from "next/navigation";
 
 export default function SearchAutoComplete({
   className,
 }: {
   className: string;
 }) {
-  const items = [
-    {
-      id: 0,
-      name: "Cobol",
-    },
-    {
-      id: 1,
-      name: "JavaScript",
-    },
-    {
-      id: 2,
-      name: "Basic",
-    },
-    {
-      id: 3,
-      name: "PHP",
-    },
-    {
-      id: 4,
-      name: "Java",
-    },
-  ];
-
-  const handleOnSelect = (item: any) => {
-    console.log(item);
+  const router = useRouter();
+  const handleOnSelect = (item: dogItem) => {
+    router.push(`/${item.name.replace(/ /g, "-")}`);
   };
 
   return (
     <ReactSearchAutocomplete
       className={className}
-      items={items}
+      items={dogBreedList}
       onSelect={handleOnSelect}
-      // formatResult={(item: any) => {
-      //   return GraphSearchResult(item);
-      // }}
       styling={{
         border: "2.5px solid #FFD29D",
         lineColor: "rgba(0,0,0,.35)",
