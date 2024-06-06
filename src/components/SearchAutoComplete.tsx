@@ -14,7 +14,7 @@ export default function SearchAutoComplete({
 }) {
   const router = useRouter();
   const handleOnSelect = (item: dogItem) => {
-    router.push(`/${item.name.replace(/ /g, "-")}`);
+    router.push(`/${item.name.replace(/ /g, "_")}`);
   };
 
   return (

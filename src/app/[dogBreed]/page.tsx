@@ -23,7 +23,7 @@ export default function dogResults({
           </Link>
           <SearchAutoComplete
             className="w-[75%] md:w-[50%] lg:w-[30%]"
-            placeholder={params.dogBreed}
+            placeholder={params.dogBreed.replace(/_/g, " ")}
           />
         </div>
       </Border>
