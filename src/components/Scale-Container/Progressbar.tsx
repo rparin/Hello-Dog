@@ -21,7 +21,7 @@ export default function Progressbar({
       <p className="ml-1.5 mr-1.5 border-b border-solid border-black text-xs leading-none md:text-base">
         {title}
       </p>
-      <div className="mt-0.5 h-full w-full rounded-3xl bg-white">
+      <div className="mx-1 mt-0.5 h-full rounded-3xl bg-white md:mx-0.5">
         <div
           className={cn(
             "h-full rounded-3xl",
