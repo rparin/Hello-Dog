@@ -25,12 +25,7 @@ export default function Progressbar({
         {barValue.name}
       </p>
       <div className="mx-1 mt-0.5 h-full rounded-3xl bg-white md:mx-0.5">
-        <div
-          className={cn(
-            "h-full rounded-3xl",
-            scale[barValue.value as keyof typeof scale],
-          )}
-        ></div>
+        <div className={cn("h-full rounded-3xl", scale[barValue.value])}></div>
       </div>
     </div>
   );
