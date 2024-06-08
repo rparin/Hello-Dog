@@ -62,37 +62,33 @@ export default function dogResults({
               placeholder={params.dogBreed.replace(/_/g, " ")}
             />
           </div>
-          <div className="col-span-1 row-span-2 md:col-span-5 md:col-start-11 md:row-span-3 lg:col-span-3 lg:col-start-11 lg:row-span-2">
-            <ScaleContainer
-              className="rounded-2xl px-3 py-2 md:rounded-3xl md:px-5"
-              title="Good With"
-              scales={[
-                { name: "Children", value: 4 },
-                { name: "Strangers", value: 4 },
-                { name: "Other Dogs", value: 3 },
-              ]}
-            ></ScaleContainer>
-          </div>
+          <ScaleContainer
+            className="col-span-1 row-span-2 rounded-2xl px-3 py-2 md:col-span-5 md:col-start-11 md:row-span-3 md:rounded-3xl md:px-5 lg:col-span-3 lg:col-start-11 lg:row-span-2"
+            title="Good With"
+            scales={[
+              { name: "Children", value: 4 },
+              { name: "Strangers", value: 4 },
+              { name: "Other Dogs", value: 3 },
+            ]}
+          ></ScaleContainer>
           <div className="col-span-1 row-span-2 bg-sky-500 md:col-span-5 md:col-start-11 md:row-span-5 lg:col-span-3 lg:col-start-5 lg:row-span-4 lg:row-start-7">
             Corgi 6
           </div>
-          <div className="col-span-1 row-span-5 md:col-span-5 md:row-span-7 md:row-start-5 lg:col-span-3 lg:col-start-5 lg:row-span-5 lg:row-start-2">
-            <ScaleContainer
-              className="rounded-2xl px-3 py-2 md:rounded-3xl md:px-5"
-              title="Characteristics"
-              scales={[
-                { name: "Shedding", value: 3 },
-                { name: "Grooming", value: 2 },
-                { name: "Drooling", value: 1 },
-                { name: "Coat Length", value: 1 },
-                { name: "Playfulness", value: 4 },
-                { name: "Protectiveness", value: 3 },
-                { name: "Trainability", value: 4 },
-                { name: "Energy", value: 4 },
-                { name: "Barking", value: 5 },
-              ]}
-            ></ScaleContainer>
-          </div>
+          <ScaleContainer
+            className="col-span-1 row-span-5 rounded-2xl px-3 py-2 md:col-span-5 md:row-span-7 md:row-start-5 md:rounded-3xl md:px-5 lg:col-span-3 lg:col-start-5 lg:row-span-5 lg:row-start-2"
+            title="Characteristics"
+            scales={[
+              { name: "Shedding", value: 3 },
+              { name: "Grooming", value: 2 },
+              { name: "Drooling", value: 1 },
+              { name: "Coat Length", value: 1 },
+              { name: "Playfulness", value: 4 },
+              { name: "Protectiveness", value: 3 },
+              { name: "Trainability", value: 4 },
+              { name: "Energy", value: 4 },
+              { name: "Barking", value: 5 },
+            ]}
+          ></ScaleContainer>
           <div className="col-span-1 row-span-3 bg-green-500 md:col-span-5 md:row-span-4 lg:col-span-4 lg:row-span-6 lg:row-start-5">
             Corgi 5
           </div>
