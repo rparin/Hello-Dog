@@ -24,7 +24,7 @@ export default function ScaleContainer({
   return (
     <div
       className={cn(
-        "flex h-full w-full flex-col items-center bg-accent text-black md:gap-1",
+        "flex h-full w-full flex-col items-center bg-accent text-black",
         className,
       )}
     >
