@@ -28,20 +28,20 @@ export default function dogResults({
             Corgi 1
           </div>
           <InfoContainer
-            className="col-span-1 row-span-2 rounded-2xl px-3 py-2 md:col-span-5 md:col-start-11 md:row-span-3 md:rounded-3xl md:px-5 lg:col-span-3 lg:col-start-8 lg:row-span-2 lg:row-start-7"
+            className="col-span-1 row-span-2 rounded-2xl px-3 py-2 md:col-span-5 md:col-start-11 md:row-span-3 md:rounded-3xl md:px-5 lg:col-span-3 lg:col-start-8 lg:row-span-2 lg:row-start-7 lg:px-3"
             title="Physical Stats"
             info={[
               { name: "Life Expectancy", value: { other: "12 - 15 years" } },
               {
-                name: "Height",
+                name: "Height (in)",
                 value: {
-                  male: "10.5 - 12.5 in",
-                  female: "10.5 - 12.5 in",
+                  male: "10.5 - 12.5",
+                  female: "10.5 - 12.5",
                 },
               },
               {
-                name: "Weight",
-                value: { male: "30 - 38 Ibs", female: "25 - 34 Ibs" },
+                name: "Weight (Ibs)",
+                value: { male: "30 - 38", female: "25 - 34" },
               },
             ]}
           ></InfoContainer>
