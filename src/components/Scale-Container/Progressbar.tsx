@@ -1,13 +1,16 @@
 import { cn } from "@/lib/utils";
 
+export type barType = {
+  name: string;
+  value: 1 | 2 | 3 | 4 | 5;
+};
+
 export default function Progressbar({
   className,
-  title,
-  value,
+  barValue,
 }: {
   className?: string;
-  title: string;
-  value: number;
+  barValue: barType;
 }) {
   const scale = {
     1: "w-1/5 bg-[#F03F4B]",
@@ -19,13 +22,13 @@ export default function Progressbar({
   return (
     <div className={cn("flex h-full w-full flex-col", className)}>
       <p className="ml-1.5 mr-1.5 border-b border-solid border-black text-xs leading-none md:text-base">
-        {title}
+        {barValue.name}
       </p>
       <div className="mx-1 mt-0.5 h-full rounded-3xl bg-white md:mx-0.5">
         <div
           className={cn(
             "h-full rounded-3xl",
-            scale[value as keyof typeof scale],
+            scale[barValue.value as keyof typeof scale],
           )}
         ></div>
       </div>

@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
 import Progressbar from "./Progressbar";
+import { barType } from "./Progressbar";
 
 export default function ScaleContainer({
   className,
@@ -8,15 +9,14 @@ export default function ScaleContainer({
 }: {
   className?: string;
   title: string;
-  scales: { title: string; value: number }[];
+  scales: Array<barType>;
 }) {
   const barItems = scales.map((item) => {
     return (
       <Progressbar
         className="md:mb-1"
-        key={item.title}
-        title={item.title}
-        value={item.value}
+        key={item.name}
+        barValue={item}
       ></Progressbar>
     );
   });

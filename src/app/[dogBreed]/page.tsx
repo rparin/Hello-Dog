@@ -51,9 +51,9 @@ export default function dogResults({
               className="rounded-2xl px-3 py-2 md:rounded-3xl md:px-5"
               title="Good With"
               scales={[
-                { title: "Children", value: 4 },
-                { title: "Strangers", value: 4 },
-                { title: "Other Dogs", value: 3 },
+                { name: "Children", value: 4 },
+                { name: "Strangers", value: 4 },
+                { name: "Other Dogs", value: 3 },
               ]}
             ></ScaleContainer>
           </div>
@@ -65,15 +65,15 @@ export default function dogResults({
               className="rounded-2xl px-3 py-2 md:rounded-3xl md:px-5"
               title="Characteristics"
               scales={[
-                { title: "Shedding", value: 3 },
-                { title: "Grooming", value: 2 },
-                { title: "Drooling", value: 1 },
-                { title: "Coat length", value: 1 },
-                { title: "Playfulness", value: 4 },
-                { title: "Protectiveness", value: 3 },
-                { title: "Trainability", value: 4 },
-                { title: "Energy", value: 4 },
-                { title: "Barking", value: 5 },
+                { name: "Shedding", value: 3 },
+                { name: "Grooming", value: 2 },
+                { name: "Drooling", value: 1 },
+                { name: "Coat length", value: 1 },
+                { name: "Playfulness", value: 4 },
+                { name: "Protectiveness", value: 3 },
+                { name: "Trainability", value: 4 },
+                { name: "Energy", value: 4 },
+                { name: "Barking", value: 5 },
               ]}
             ></ScaleContainer>
           </div>
