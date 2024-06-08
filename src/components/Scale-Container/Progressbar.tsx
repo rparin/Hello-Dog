@@ -18,7 +18,7 @@ export default function Progressbar({
   };
   return (
     <div className={cn("flex h-full w-full flex-col", className)}>
-      <p className="w-full border-b border-solid border-black text-xs leading-none md:text-base">
+      <p className="ml-1.5 mr-1.5 border-b border-solid border-black text-xs leading-none md:text-base">
         {title}
       </p>
       <div className="mt-0.5 h-full w-full rounded-3xl bg-white">
