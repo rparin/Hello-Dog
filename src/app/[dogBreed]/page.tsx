@@ -4,6 +4,7 @@ import { webLogo } from "@/constants/icons";
 import Border from "@/components/Border";
 import SearchAutoComplete from "@/components/SearchAutoComplete";
 import ScaleContainer from "@/components/Scale-Container/ScaleContainer";
+import InfoContainer from "@/components/Info-Container/InfoContainer";
 
 export default function dogResults({
   params,
@@ -26,9 +27,24 @@ export default function dogResults({
           <div className="hidden bg-cyan-500 md:col-span-4 md:row-span-3 md:block">
             Corgi 1
           </div>
-          <div className="col-span-1 row-span-2 bg-yellow-500 md:col-span-5 md:col-start-11 md:row-span-3 lg:col-span-3 lg:col-start-8 lg:row-span-2 lg:row-start-7">
-            Physical Stats
-          </div>
+          <InfoContainer
+            className="col-span-1 row-span-2 rounded-2xl px-3 py-2 md:col-span-5 md:col-start-11 md:row-span-3 md:rounded-3xl md:px-5 lg:col-span-3 lg:col-start-8 lg:row-span-2 lg:row-start-7"
+            title="Physical Stats"
+            info={[
+              { name: "Life Expectancy", value: { other: "12 - 15 years" } },
+              {
+                name: "Height",
+                value: {
+                  male: "10.5 - 12.5 in",
+                  female: "10.5 - 12.5 in",
+                },
+              },
+              {
+                name: "Weight",
+                value: { male: "30 - 38 Ibs", female: "25 - 34 Ibs" },
+              },
+            ]}
+          ></InfoContainer>
           <Link
             className="col-span-2 row-span-2 flex items-center justify-center md:col-span-5 md:col-start-6 md:row-span-3 md:row-start-5 lg:col-span-3 lg:col-start-8 lg:row-span-2 lg:row-start-4"
             href={"/"}
