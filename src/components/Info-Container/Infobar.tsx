@@ -36,7 +36,7 @@ export default function Infobar({
               src={maleIcon.img}
               alt={maleIcon.alt}
             />
-            <p className="mr-1.5 leading-none md:mr-4 md:text-sm lg:text-base">
+            <p className="mr-1.5 leading-none md:mr-2 md:text-base lg:mr-3 xl:mr-4">
               {info}
             </p>
             <Image
@@ -44,9 +44,7 @@ export default function Infobar({
               src={femaleIcon.img}
               alt={femaleIcon.alt}
             />
-            <p className="leading-none md:mr-4 md:text-sm lg:text-base">
-              {info2}
-            </p>
+            <p className="leading-none md:text-base">{info2}</p>
           </div>
         ) : (
           <p className="leading-none">{info}</p>
