@@ -68,7 +68,7 @@ export default function dogResults({
                 { name: "Shedding", value: 3 },
                 { name: "Grooming", value: 2 },
                 { name: "Drooling", value: 1 },
-                { name: "Coat length", value: 1 },
+                { name: "Coat Length", value: 1 },
                 { name: "Playfulness", value: 4 },
                 { name: "Protectiveness", value: 3 },
                 { name: "Trainability", value: 4 },
