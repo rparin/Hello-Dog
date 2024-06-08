@@ -14,7 +14,7 @@ export default function dogResults({
   return (
     <>
       <Border>
-        <div className="grid-rows-18 grid h-full w-full grid-cols-2 gap-1 p-1 md:grid-cols-15 md:grid-rows-15 lg:grid-cols-17 lg:grid-rows-10">
+        <div className="grid h-full w-full grid-cols-2 grid-rows-18 gap-1 p-1 md:grid-cols-15 md:grid-rows-15 lg:grid-cols-17 lg:grid-rows-10">
           <div className="col-span-2 bg-amber-500 md:col-span-8 lg:col-span-7">
             Random Dog Fact
           </div>
@@ -63,7 +63,7 @@ export default function dogResults({
             />
           </div>
           <ScaleContainer
-            className="col-span-1 row-span-3 gap-1 rounded-2xl px-3 py-2 md:col-span-5 md:col-start-11 md:row-span-3 md:gap-1 md:rounded-3xl md:px-5 lg:col-span-3 lg:col-start-11 lg:row-span-2"
+            className="col-span-1 row-span-3 gap-2 rounded-2xl px-3 py-2 md:col-span-5 md:col-start-11 md:row-span-3 md:gap-1 md:rounded-3xl md:px-5 lg:col-span-3 lg:col-start-11 lg:row-span-2"
             title="Good With"
             scales={[
               { name: "Children", value: 4 },
