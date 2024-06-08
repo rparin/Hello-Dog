@@ -33,6 +33,16 @@ const config = {
       },
     },
     extend: {
+      gridTemplateColumns: {
+        "15": "repeat(15, minmax(0, 1fr))",
+        "16": "repeat(16, minmax(0, 1fr))",
+        "17": "repeat(17, minmax(0, 1fr))",
+      },
+      gridTemplateRows: {
+        "15": "repeat(15, minmax(0, 1fr))",
+        "16": "repeat(16, minmax(0, 1fr))",
+        "17": "repeat(17, minmax(0, 1fr))",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
