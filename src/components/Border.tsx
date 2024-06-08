@@ -14,7 +14,7 @@ export default function Border({
   return (
     <div
       className={cn(
-        "h-dvh rounded-[30px] rounded-b-[50px] bg-border p-[10px] pb-[30px] md:rounded-[45px] md:rounded-b-[50px] md:pb-[50px]",
+        "h-dvh rounded-[30px] rounded-b-[50px] bg-border p-[10px] pb-[30px] md:rounded-[45px] md:rounded-b-[50px] md:p-[25px] md:pb-[50px]",
         styling?.outerClassName,
       )}
     >
