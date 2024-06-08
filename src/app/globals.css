@@ -49,3 +49,12 @@ html {
     text-wrap: balance;
   }
 }
+
+::placeholder {
+  text-align: center;
+  padding-right: 1.5rem;
+}
+
+input {
+  margin-left: 0.5rem;
+}
