@@ -3,6 +3,7 @@ import Image from "next/image";
 import { webLogo } from "@/constants/icons";
 import Border from "@/components/Border";
 import SearchAutoComplete from "@/components/SearchAutoComplete";
+import ScaleContainer from "@/components/Scale-Container/ScaleContainer";
 
 export default function dogResults({
   params,
@@ -12,7 +13,7 @@ export default function dogResults({
   return (
     <>
       <Border>
-        <div className="grid h-full w-full grid-cols-2 grid-rows-15 gap-1 md:grid-cols-15 md:grid-rows-15 lg:grid-cols-17 lg:grid-rows-10">
+        <div className="grid h-full w-full grid-cols-2 grid-rows-15 gap-1 p-1 md:grid-cols-15 md:grid-rows-15 lg:grid-cols-17 lg:grid-rows-10">
           <div className="col-span-2 bg-amber-500 md:col-span-8 lg:col-span-7">
             Random Dog Fact
           </div>
@@ -45,8 +46,16 @@ export default function dogResults({
               placeholder={params.dogBreed.replace(/_/g, " ")}
             />
           </div>
-          <div className="col-span-1 row-span-2 bg-orange-500 md:col-span-5 md:col-start-11 md:row-span-3 lg:col-span-3 lg:col-start-11 lg:row-span-2">
-            Good With
+          <div className="col-span-1 row-span-2 md:col-span-5 md:col-start-11 md:row-span-3 lg:col-span-3 lg:col-start-11 lg:row-span-2">
+            <ScaleContainer
+              className="rounded-2xl px-3 py-2 md:rounded-3xl md:px-5"
+              title="Good With"
+              scales={[
+                { title: "Children", value: 4 },
+                { title: "Strangers", value: 4 },
+                { title: "Other Dogs", value: 3 },
+              ]}
+            ></ScaleContainer>
           </div>
           <div className="col-span-1 row-span-2 bg-sky-500 md:col-span-5 md:col-start-11 md:row-span-5 lg:col-span-3 lg:col-start-5 lg:row-span-4 lg:row-start-7">
             Corgi 6
