@@ -1,1 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 12 12"><g style="stroke-width:.60000002;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none"><path d="m7.828125 4.171875.7929688-.7929687.7929687-.7929688.7929685-.7929688L11 1" style="fill:none;stroke:#000;stroke-width:.60000002;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" transform="translate(-1.2805176 1.2805176)"/><path d="M9.2304688 1H11v1.7695312" style="fill:none;stroke:#000;stroke-width:.60000002;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" transform="translate(-1.2805176 1.2805176)"/></g><path style="fill:none;stroke:#000;stroke-width:.60000002;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" d="M7.2805177 7.219483c0-.6894535-.2802735-1.3144536-.7329103-1.7670904-.4526367-.4526367-1.0776367-.7329101-1.7670897-.7329101-1.378907 0-2.5 1.1210935-2.5 2.5000005 0 1.378906 1.121093 2.4999994 2.5 2.4999994 1.378906 0 2.5-1.1210934 2.5-2.4999994z"/></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 16 16" width="16" height="16" enable-background="new 0 0 16 16" xml:space="preserve">
+<g>
+	<path fill="none" stroke="#02A3FE" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M9,7l4-4"/>
+	<path fill="none" stroke="#02A3FE" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M8.6,3H13v4.4"/>
+</g>
+<path fill="none" stroke="#02A3FE" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M9.7,9.6
+	c0-0.9-0.4-1.8-1-2.4s-1.4-1-2.4-1C4.5,6.3,3,7.8,3,9.6S4.5,13,6.4,13S9.7,11.5,9.7,9.6z"/>
+</svg>
