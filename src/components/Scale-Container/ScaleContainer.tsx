@@ -14,7 +14,7 @@ export default function ScaleContainer({
   const barItems = scales.map((item) => {
     return (
       <Progressbar
-        className="md:mb-1"
+        className="overflow-auto md:mb-1"
         key={item.name}
         barValue={item}
       ></Progressbar>
