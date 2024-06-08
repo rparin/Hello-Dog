@@ -14,21 +14,21 @@ export default function dogResults({
   return (
     <>
       <Border>
-        <div className="grid h-full w-full grid-cols-2 grid-rows-15 gap-1 p-1 md:grid-cols-15 md:grid-rows-15 lg:grid-cols-17 lg:grid-rows-10">
+        <div className="grid-rows-18 grid h-full w-full grid-cols-2 gap-1 p-1 md:grid-cols-15 md:grid-rows-15 lg:grid-cols-17 lg:grid-rows-10">
           <div className="col-span-2 bg-amber-500 md:col-span-8 lg:col-span-7">
             Random Dog Fact
           </div>
           <div className="col-span-1 row-span-2 bg-green-500 md:col-span-7 md:row-span-4 lg:col-span-4 lg:row-span-3">
             Corgi 7
           </div>
-          <div className="col-span-1 row-span-4 bg-slate-500 md:col-span-4 md:row-span-3 lg:col-span-6 lg:row-span-4">
+          <div className="col-span-1 row-span-5 bg-slate-500 md:col-span-4 md:row-span-3 lg:col-span-6 lg:row-span-4">
             Corgi 8
           </div>
           <div className="hidden bg-cyan-500 md:col-span-4 md:row-span-3 md:block">
             Corgi 1
           </div>
           <InfoContainer
-            className="col-span-1 row-span-2 rounded-2xl px-3 py-2 md:col-span-5 md:col-start-11 md:row-span-3 md:rounded-3xl md:px-5 lg:col-span-3 lg:col-start-8 lg:row-span-2 lg:row-start-7 lg:px-3"
+            className="col-span-1 row-span-3 rounded-2xl px-3 py-2 md:col-span-5 md:col-start-11 md:row-span-3 md:rounded-3xl md:px-5 lg:col-span-3 lg:col-start-8 lg:row-span-2 lg:row-start-7 lg:px-3"
             title="Physical Stats"
             info={[
               { name: "Life Expectancy", value: { other: "12 - 15 years" } },
@@ -63,7 +63,7 @@ export default function dogResults({
             />
           </div>
           <ScaleContainer
-            className="col-span-1 row-span-2 rounded-2xl px-3 py-2 md:col-span-5 md:col-start-11 md:row-span-3 md:rounded-3xl md:px-5 lg:col-span-3 lg:col-start-11 lg:row-span-2"
+            className="col-span-1 row-span-3 gap-1 rounded-2xl px-3 py-2 md:col-span-5 md:col-start-11 md:row-span-3 md:gap-1 md:rounded-3xl md:px-5 lg:col-span-3 lg:col-start-11 lg:row-span-2"
             title="Good With"
             scales={[
               { name: "Children", value: 4 },
@@ -71,11 +71,11 @@ export default function dogResults({
               { name: "Other Dogs", value: 3 },
             ]}
           ></ScaleContainer>
-          <div className="col-span-1 row-span-2 bg-sky-500 md:col-span-5 md:col-start-11 md:row-span-5 lg:col-span-3 lg:col-start-5 lg:row-span-4 lg:row-start-7">
+          <div className="col-span-1 row-span-3 bg-sky-500 md:col-span-5 md:col-start-11 md:row-span-5 lg:col-span-3 lg:col-start-5 lg:row-span-4 lg:row-start-7">
             Corgi 6
           </div>
           <ScaleContainer
-            className="col-span-1 row-span-5 rounded-2xl px-3 py-2 md:col-span-5 md:row-span-7 md:row-start-5 md:rounded-3xl md:px-5 lg:col-span-3 lg:col-start-5 lg:row-span-5 lg:row-start-2"
+            className="col-span-1 row-span-6 rounded-2xl px-3 py-2 md:col-span-5 md:row-span-7 md:row-start-5 md:rounded-3xl md:px-5 lg:col-span-3 lg:col-start-5 lg:row-span-5 lg:row-start-2"
             title="Characteristics"
             scales={[
               { name: "Shedding", value: 3 },
@@ -92,7 +92,7 @@ export default function dogResults({
           <div className="col-span-1 row-span-3 bg-green-500 md:col-span-5 md:row-span-4 lg:col-span-4 lg:row-span-6 lg:row-start-5">
             Corgi 5
           </div>
-          <div className="col-span-1 row-span-2 bg-red-500 md:col-span-5 md:row-span-3 lg:col-span-3 lg:col-start-11 lg:row-span-4">
+          <div className="col-span-1 row-span-3 bg-red-500 md:col-span-5 md:row-span-3 lg:col-span-3 lg:col-start-11 lg:row-span-4">
             Corgi 4
           </div>
           <div className="hidden bg-slate-500 md:col-span-5 md:row-span-4 md:row-start-9 md:block lg:col-span-4 lg:row-span-3">

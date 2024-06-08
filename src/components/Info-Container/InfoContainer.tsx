@@ -27,7 +27,7 @@ export default function InfoContainer({
         className,
       )}
     >
-      <h1 className="text-sm leading-none md:mb-0.5 md:text-xl">{title}</h1>
+      <h1 className="text-base leading-none md:mb-0.5 md:text-xl">{title}</h1>
       {barItems}
     </div>
   );

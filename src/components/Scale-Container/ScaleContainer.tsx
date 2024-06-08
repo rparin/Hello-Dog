@@ -28,7 +28,7 @@ export default function ScaleContainer({
         className,
       )}
     >
-      <h1 className="text-sm leading-none md:text-xl">{title}</h1>
+      <h1 className="text-base leading-none md:text-xl">{title}</h1>
       {barItems}
     </div>
   );
