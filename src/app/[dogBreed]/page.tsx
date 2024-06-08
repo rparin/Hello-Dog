@@ -60,8 +60,22 @@ export default function dogResults({
           <div className="col-span-1 row-span-2 bg-sky-500 md:col-span-5 md:col-start-11 md:row-span-5 lg:col-span-3 lg:col-start-5 lg:row-span-4 lg:row-start-7">
             Corgi 6
           </div>
-          <div className="col-span-1 row-span-5 bg-indigo-500 md:col-span-5 md:row-span-7 md:row-start-5 lg:col-span-3 lg:col-start-5 lg:row-span-5 lg:row-start-2">
-            Characteristics
+          <div className="col-span-1 row-span-5 md:col-span-5 md:row-span-7 md:row-start-5 lg:col-span-3 lg:col-start-5 lg:row-span-5 lg:row-start-2">
+            <ScaleContainer
+              className="rounded-2xl px-3 py-2 md:rounded-3xl md:px-5"
+              title="Characteristics"
+              scales={[
+                { title: "Shedding", value: 3 },
+                { title: "Grooming", value: 2 },
+                { title: "Drooling", value: 1 },
+                { title: "Coat length", value: 1 },
+                { title: "Playfulness", value: 4 },
+                { title: "Protectiveness", value: 3 },
+                { title: "Trainability", value: 4 },
+                { title: "Energy", value: 4 },
+                { title: "Barking", value: 5 },
+              ]}
+            ></ScaleContainer>
           </div>
           <div className="col-span-1 row-span-3 bg-green-500 md:col-span-5 md:row-span-4 lg:col-span-4 lg:row-span-6 lg:row-start-5">
             Corgi 5
