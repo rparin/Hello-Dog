@@ -5,6 +5,7 @@ import Border from "@/components/Border";
 import SearchAutoComplete from "@/components/SearchAutoComplete";
 import ScaleContainer from "@/components/Scale-Container/ScaleContainer";
 import InfoContainer from "@/components/Info-Container/InfoContainer";
+import DogFact from "@/components/DogFact";
 
 export default function dogResults({
   params,
@@ -15,9 +16,7 @@ export default function dogResults({
     <>
       <Border>
         <div className="grid h-full w-full grid-cols-2 grid-rows-18 gap-1 p-1 md:grid-cols-15 md:grid-rows-15 lg:grid-cols-17 lg:grid-rows-10">
-          <div className="col-span-2 bg-amber-500 md:col-span-8 lg:col-span-7">
-            Random Dog Fact
-          </div>
+          <DogFact className="col-span-2 rounded-2xl bg-border md:col-span-8 lg:col-span-7"></DogFact>
           <div className="col-span-1 row-span-2 bg-green-500 md:col-span-7 md:row-span-4 lg:col-span-4 lg:row-span-3">
             Corgi 7
           </div>
