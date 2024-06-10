@@ -8,5 +8,5 @@ export default function dogResultsLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return { children };
+  return <>{children}</>;
 }
