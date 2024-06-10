@@ -86,7 +86,7 @@ export const dogBreedList = [
   { id: 80, name: "Indian_Mudhol" },
   { id: 81, name: "Newfoundland" },
   { id: 82, name: "Otterhound" },
-  { id: 83, name: "Caucasian_ovcharka" },
+  { id: 83, name: "Caucasian_Ovcharka" },
   { id: 84, name: "Papillon" },
   { id: 85, name: "Indian_Pariah" },
   { id: 86, name: "Pekinese" },
