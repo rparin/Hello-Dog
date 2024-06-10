@@ -1,8 +1,6 @@
 "use server";
 
-export async function getCeoDogImage(breedUrl: "string") {
-  // Cardigan_Corgi   ->  corgi/cardigan
-  // Coton!de_Tulear  -> cotondetulear
+export async function getCeoDogImage(breedUrl: string) {
   const res = await fetch(
     `https://dog.ceo/api/breed/${breedUrl}/images/random`,
     {
@@ -10,6 +8,7 @@ export async function getCeoDogImage(breedUrl: "string") {
       headers: {
         "Content-Type": "application/json",
       },
+      cache: "no-store",
     },
   );
   return await res.json();

@@ -6,6 +6,7 @@ export async function getDogFact() {
     headers: {
       "Content-Type": "application/vnd.api+json; charset=utf-8",
     },
+    cache: "no-store",
   });
   return await res.json();
 }
