@@ -86,10 +86,10 @@ export default function dogResults({
               priority
             />
           </Link>
-          <div className="col-span-2 row-span-1 flex items-center justify-center px-20 md:col-span-5 md:col-start-6 md:row-start-8 md:px-0 lg:col-span-3 lg:col-start-8 lg:row-start-6">
+          <div className="z-50 col-span-2 row-span-1 flex items-center justify-center px-20 md:col-span-5 md:col-start-6 md:row-start-8 md:px-0 lg:col-span-3 lg:col-start-8 lg:row-start-6">
             <SearchAutoComplete
               className="flex w-full"
-              placeholder={params.dogBreed.replace(/_/g, " ")}
+              placeholder={params.dogBreed.replace(/!|_/g, " ")}
             />
           </div>
           <ScaleContainer
