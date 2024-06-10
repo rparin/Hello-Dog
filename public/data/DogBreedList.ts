@@ -35,7 +35,7 @@ export const dogBreedList = [
   { id: 29, name: "Border_Collie" },
   { id: 30, name: "Coonhound" },
   { id: 31, name: "Cardigan_Corgi" },
-  { id: 32, name: "Coton!de_Tulear" },
+  { id: 32, name: "Coton!de!Tulear" },
   { id: 33, name: "Dachshund" },
   { id: 34, name: "Dalmatian" },
   { id: 35, name: "Great_Dane" },
