@@ -1,7 +1,9 @@
 import { cn } from "@/lib/utils";
 import { ExternalLink } from "lucide-react";
+import { getDogFact } from "@/lib/actions/DogFact";
 
-export default function DogFact({ className }: { className?: string }) {
+export default async function DogFact({ className }: { className?: string }) {
+  const dogFact = await getDogFact();
   return (
     <div
       className={cn(
@@ -24,8 +26,7 @@ export default function DogFact({ className }: { className?: string }) {
         Random Dog Fact
       </p>
       <p className="mx-2 text-sm leading-none md:mx-3 lg:mx-4 lg:text-base">
-        Dogs have twice as many muscles to move their ears as humans, if you're
-        looking for unusual facts about dogs!
+        {dogFact.data[0].attributes.body}
       </p>
     </div>
   );
