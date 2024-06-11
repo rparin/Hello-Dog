@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 
 export type barType = {
   name: string;
-  value: 1 | 2 | 3 | 4 | 5;
+  value: 1 | 2 | 3 | 4 | 5 | 0;
 };
 
 export default function Progressbar({
@@ -13,6 +13,7 @@ export default function Progressbar({
   barValue: barType;
 }) {
   const scale = {
+    0: "w-0",
     1: "w-1/5 bg-[#F03F4B]",
     2: "w-2/5 bg-[#E54C25]",
     3: "w-3/5 bg-[#E59E24]",
