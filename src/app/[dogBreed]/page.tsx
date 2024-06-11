@@ -15,7 +15,8 @@ export default async function dogResults({
 }: {
   params: { dogBreed: string };
 }) {
-  var dogBreedUrl = DogCeoTable[params.dogBreed as keyof typeof DogCeoTable];
+  var dogBreedUrl =
+    DogCeoTable[params.dogBreed.replace(/-/g, "_") as keyof typeof DogCeoTable];
   const breedInfo = await getDogBreedInfo(params.dogBreed.replace(/_/g, " "));
   const dogName = breedInfo[0]?.name;
   var lifeExpect, heightM, heightF, weightM, weightF;

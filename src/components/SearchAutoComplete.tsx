@@ -23,7 +23,7 @@ export default function SearchAutoComplete({
       items={dogBreedList}
       onSelect={handleOnSelect}
       // formatResult={(result: dogItem) => {
-      //   return <>{result.name.replace(/!|_/g, " ")}</>;
+      //   return <>{result.name.replace(/_/g, "-")}</>;
       // }}
       styling={{
         border: "2.5px solid #FFD29D",
