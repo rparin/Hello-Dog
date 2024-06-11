@@ -10,7 +10,7 @@ export async function getDogBreedInfo(breedName: string) {
         "X-RapidAPI-Key": parsedEnv.X_RapidAPI_Key,
         "X-RapidAPI-Host": parsedEnv.X_RapidAPI_Host,
       },
-      // cache: "no-store",
+      cache: "no-store",
     },
   );
   return await res.json();
