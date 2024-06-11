@@ -15,7 +15,7 @@ export default function Progressbar({
   const scale = {
     0: "w-0",
     1: "w-1/5 bg-[#F03F4B]",
-    2: "w-2/5 bg-[#E54C25]",
+    2: "w-2/5 bg-[#f66e1c]",
     3: "w-3/5 bg-[#E59E24]",
     4: "w-4/5 bg-[#9ACA3C]",
     5: "w-full bg-[#55B949]",
