@@ -7,19 +7,16 @@ import ScaleContainer from "@/components/Scale-Container/ScaleContainer";
 import InfoContainer from "@/components/Info-Container/InfoContainer";
 import DogFact from "@/components/DogFact";
 import DogCeoImg from "@/components/DogCeoImg";
+import { DogCeoTable } from "@data/DogCeoTable";
+import { getDogBreedInfo } from "@/lib/actions/DogBreedInfo";
 
-export default function dogResults({
+export default async function dogResults({
   params,
 }: {
   params: { dogBreed: string };
 }) {
-  //Convert url to dog breed url
-  //German!Longhair_Pointer -> pointer/germanlonghair
-  var dogBreedUrl = params.dogBreed.replace("!", "").toLowerCase();
-  const nStr = dogBreedUrl.split("_");
-  if (nStr.length != 1) {
-    dogBreedUrl = `${nStr[1]}/${nStr[0]}`;
-  }
+  var dogBreedUrl = DogCeoTable[params.dogBreed as keyof typeof DogCeoTable];
+  const breedInfo = await getDogBreedInfo(params.dogBreed.replace(/_/g, " "));
   return (
     <>
       <Border>
@@ -66,7 +63,7 @@ export default function dogResults({
           <div className="z-50 col-span-2 row-span-1 flex items-center justify-center px-20 md:col-span-5 md:col-start-6 md:row-start-8 md:px-0 lg:col-span-3 lg:col-start-8 lg:row-start-6">
             <SearchAutoComplete
               className="flex w-full"
-              placeholder={params.dogBreed.replace(/!|_/g, " ")}
+              placeholder={breedInfo[0].name}
             />
           </div>
           <ScaleContainer

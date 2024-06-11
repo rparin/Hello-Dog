@@ -14,7 +14,7 @@ export default function SearchAutoComplete({
 }) {
   const router = useRouter();
   const handleOnSelect = (item: dogItem) => {
-    router.push(`/${item.name}`);
+    router.push(`/${item.name.replace(/ /g, "_")}`);
   };
 
   return (
@@ -22,10 +22,9 @@ export default function SearchAutoComplete({
       className={className}
       items={dogBreedList}
       onSelect={handleOnSelect}
-      formatResult={(result: dogItem) => {
-        // Convert '_' and '!' to space
-        return <>{result.name.replace(/!|_/g, " ")}</>;
-      }}
+      // formatResult={(result: dogItem) => {
+      //   return <>{result.name.replace(/!|_/g, " ")}</>;
+      // }}
       styling={{
         border: "2.5px solid #FFD29D",
         lineColor: "rgba(0,0,0,.35)",

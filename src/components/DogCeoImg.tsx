@@ -15,7 +15,7 @@ export default async function DogCeoImg({
       fill={true}
       className={cn(className, "object-cover object-center")}
       src={dogImg.message}
-      alt={`Dog image from https://dog.ceo of type ${dogBreedUrl.replace("/", "-")}`}
+      alt={`Dog image from https://dog.ceo of type ${dogBreedUrl}`}
       priority
     />
   );
