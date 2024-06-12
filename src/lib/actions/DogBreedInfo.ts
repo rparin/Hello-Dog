@@ -18,6 +18,6 @@ export async function getDogBreedInfo(breedName: string) {
   if (!result.success) {
     throw new Error("Dog Breed Info: Invalid API Response format");
   } else {
-    return result.data;
+    return result.data[0];
   }
 }
