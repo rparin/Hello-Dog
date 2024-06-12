@@ -1,4 +1,5 @@
 "use server";
+import { DogFactSchema } from "../schema/DogFact";
 
 export async function getDogFact() {
   const res = await fetch("https://dogapi.dog/api/v2/facts", {
@@ -8,5 +9,11 @@ export async function getDogFact() {
     },
     cache: "no-store",
   });
-  return await res.json();
+  const data = await res.json();
+  const result = DogFactSchema.safeParse(data);
+  if (!result.success) {
+    throw new Error("Dog Fact: Invalid API Response format");
+  } else {
+    return await result.data;
+  }
 }

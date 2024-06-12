@@ -1,0 +1,30 @@
+import { z } from "zod";
+
+export const DogBreedInfoSchema = z.array(
+  z.object({
+    name: z.string({ message: "Invalid name" }),
+    image_link: z.string({ message: "Invalid name" }).url(),
+    good_with_children: z.number({ message: "Invalid name" }),
+    good_with_other_dogs: z.number({ message: "Invalid name" }),
+    good_with_strangers: z.number({ message: "Invalid name" }),
+    shedding: z.number({ message: "Invalid name" }),
+    grooming: z.number({ message: "Invalid name" }),
+    drooling: z.number({ message: "Invalid name" }),
+    coat_length: z.number({ message: "Invalid name" }),
+    playfulness: z.number({ message: "Invalid name" }),
+    protectiveness: z.number({ message: "Invalid name" }),
+    trainability: z.number({ message: "Invalid name" }),
+    energy: z.number({ message: "Invalid name" }),
+    barking: z.number({ message: "Invalid name" }),
+    min_life_expectancy: z.number({ message: "Invalid name" }),
+    max_life_expectancy: z.number({ message: "Invalid name" }),
+    max_height_male: z.number({ message: "Invalid name" }),
+    max_height_female: z.number({ message: "Invalid name" }),
+    max_weight_male: z.number({ message: "Invalid name" }),
+    max_weight_female: z.number({ message: "Invalid name" }),
+    min_height_male: z.number({ message: "Invalid name" }),
+    min_height_female: z.number({ message: "Invalid name" }),
+    min_weight_male: z.number({ message: "Invalid name" }),
+    min_weight_female: z.number({ message: "Invalid name" }),
+  }),
+);
