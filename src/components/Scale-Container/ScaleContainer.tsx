@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 import Progressbar from "./Progressbar";
-import { DogInfoScale } from "@/lib/schema/DogInfoScale";
+import { DogInfoScale } from "@/lib/schema/DogBreedInfo";
 
 export default function ScaleContainer({
   className,

@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { DogInfoScale } from "@/lib/schema/DogInfoScale";
+import { DogInfoScale } from "@/lib/schema/DogBreedInfo";
 
 export default function Progressbar({
   className,

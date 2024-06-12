@@ -1,5 +1,6 @@
 import { z } from "zod";
-import { DogInfoValueSchema } from "./DogInfoScale";
+
+export const DogInfoValueSchema = z.number().gt(0).lte(5).nullish();
 
 export const DogBreedInfoSchema = z.array(
   z.object({
@@ -29,3 +30,11 @@ export const DogBreedInfoSchema = z.array(
     min_weight_female: z.number(),
   }),
 );
+
+export const DogInfoScaleSchema = z.object({
+  name: z.string(),
+  value: DogInfoValueSchema,
+});
+
+export type DogInfoScale = z.infer<typeof DogInfoScaleSchema>;
+export type DogInfoValue = z.infer<typeof DogInfoValueSchema>;
