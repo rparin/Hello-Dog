@@ -1,16 +1,12 @@
 import { cn } from "@/lib/utils";
-
-export type barType = {
-  name: string;
-  value: 1 | 2 | 3 | 4 | 5 | 0;
-};
+import { DogInfoScale } from "@/lib/schema/DogInfoScale";
 
 export default function Progressbar({
   className,
   barValue,
 }: {
   className?: string;
-  barValue: barType;
+  barValue: DogInfoScale;
 }) {
   const scale = {
     0: "w-0",
@@ -26,7 +22,12 @@ export default function Progressbar({
         {barValue.name}
       </p>
       <div className="mx-1 mt-0.5 h-full rounded-3xl bg-white md:mx-0.5">
-        <div className={cn("h-full rounded-3xl", scale[barValue.value])}></div>
+        <div
+          className={cn(
+            "h-full rounded-3xl",
+            scale[barValue.value as keyof typeof scale],
+          )}
+        ></div>
       </div>
     </div>
   );

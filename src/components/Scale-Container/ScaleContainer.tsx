@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 import Progressbar from "./Progressbar";
-import { barType } from "./Progressbar";
+import { DogInfoScale } from "@/lib/schema/DogInfoScale";
 
 export default function ScaleContainer({
   className,
@@ -9,7 +9,7 @@ export default function ScaleContainer({
 }: {
   className?: string;
   title: string;
-  scales: Array<barType>;
+  scales: Array<DogInfoScale>;
 }) {
   const barItems = scales.map((item) => {
     return (
