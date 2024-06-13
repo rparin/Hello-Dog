@@ -1,5 +1,6 @@
 import { publicParsedEnv } from "@env/publicEnv";
 import type { Metadata, ResolvingMetadata } from "next";
+import { DESCRIPTION } from "@/constants/webInfo";
 
 // const twitter =  {
 //   card: 'Todo: summary_large_image',
@@ -25,8 +26,7 @@ export async function getMetadata(
     type: "website",
     url: `${publicParsedEnv.NEXT_PUBLIC_CLIENT_URL}/${params.dogBreed.replace(/-/g, "_")}`,
     title: `Hello Dog - ${params.dogBreed.replace(/_/g, " ")}`,
-    description:
-      "A website that brings you interesting dog facts, stunning dog images, and detailed dog information. Dog facts are sourced from Dog API, photos are from Unsplash or Dog.ceo, and dog breed details are retrieved from API Ninjas.",
+    description: DESCRIPTION,
     siteName: `${publicParsedEnv.NEXT_PUBLIC_CLIENT_URL}`,
     images: [
       {
