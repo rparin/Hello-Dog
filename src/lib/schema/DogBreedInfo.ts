@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-export const DogInfoValueSchema = z.number().gt(0).lte(5).nullish();
+export const DogInfoValueSchema = z.number().lte(5);
 
 export const DogBreedInfoSchema = z
   .array(
