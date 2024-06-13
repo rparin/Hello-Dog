@@ -2,11 +2,11 @@ import { publicParsedEnv } from "@env/publicEnv";
 
 const og = {
   type: "website",
-  url: "https://hello-dog.vercel.app",
+  url: `${publicParsedEnv.NEXT_PUBLIC_CLIENT_URL}`,
   title: "Hello Dog",
   description:
     "A website that brings you interesting dog facts, stunning dog images, and detailed dog information. Dog facts are sourced from Dog API, photos are from Unsplash or Dog.ceo, and dog breed details are retrieved from API Ninjas.",
-  siteName: "https://hello-dog.vercel.app",
+  siteName: `${publicParsedEnv.NEXT_PUBLIC_CLIENT_URL}`,
   images: [
     {
       url: "TBD",

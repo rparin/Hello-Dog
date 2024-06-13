@@ -23,11 +23,11 @@ export async function getMetadata(
 
   const og = {
     type: "website",
-    url: `https://hello-dog.vercel.app/${params.dogBreed.replace(/-/g, "_")}`,
+    url: `${publicParsedEnv.NEXT_PUBLIC_CLIENT_URL}/${params.dogBreed.replace(/-/g, "_")}`,
     title: `Hello Dog - ${params.dogBreed.replace(/_/g, " ")}`,
     description:
       "A website that brings you interesting dog facts, stunning dog images, and detailed dog information. Dog facts are sourced from Dog API, photos are from Unsplash or Dog.ceo, and dog breed details are retrieved from API Ninjas.",
-    siteName: "https://hello-dog.vercel.app",
+    siteName: `${publicParsedEnv.NEXT_PUBLIC_CLIENT_URL}`,
     images: [
       {
         url: "TBD",
