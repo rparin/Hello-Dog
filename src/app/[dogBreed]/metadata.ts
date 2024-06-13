@@ -1,18 +1,5 @@
 import { publicParsedEnv } from "@env/publicEnv";
-
-const og = {
-  type: "website",
-  url: "TBD",
-  title: "Hello Dog - Doggo",
-  description:
-    "A website that brings you interesting dog facts, stunning dog images, and detailed dog information. Dog facts are sourced from Dog API, photos are from Unsplash or Dog.ceo, and dog breed details are retrieved from API Ninjas.",
-  siteName: "TBD",
-  images: [
-    {
-      url: "TBD",
-    },
-  ],
-};
+import type { Metadata, ResolvingMetadata } from "next";
 
 // const twitter =  {
 //   card: 'Todo: summary_large_image',
@@ -22,12 +9,37 @@ const og = {
 //   image: 'Todo: Image'
 // }
 
-const Metadata = {
-  metadataBase: new URL(`${publicParsedEnv.NEXT_PUBLIC_CLIENT_URL}`),
-  title: og.title,
-  description: og.description,
-  openGraph: og,
-  // twitter: twitter
+export type Props = {
+  params: { dogBreed: string };
+  searchParams: { [key: string]: string | string[] | undefined };
 };
 
-export { Metadata };
+export async function getMetadata(
+  { params, searchParams }: Props,
+  parent: ResolvingMetadata,
+): Promise<Metadata> {
+  // optionally access and extend (rather than replace) parent metadata
+  // const previousImages = (await parent).openGraph?.images || [];
+
+  const og = {
+    type: "website",
+    url: `https://hello-dog.vercel.app/${params.dogBreed.replace(/-/g, "_")}`,
+    title: `Hello Dog - ${params.dogBreed.replace(/_/g, " ")}`,
+    description:
+      "A website that brings you interesting dog facts, stunning dog images, and detailed dog information. Dog facts are sourced from Dog API, photos are from Unsplash or Dog.ceo, and dog breed details are retrieved from API Ninjas.",
+    siteName: "https://hello-dog.vercel.app",
+    images: [
+      {
+        url: "TBD",
+      },
+    ],
+    // twitter: twitter
+  };
+
+  return {
+    title: og.title,
+    metadataBase: new URL(`${publicParsedEnv.NEXT_PUBLIC_CLIENT_URL}`),
+    description: og.description,
+    openGraph: og,
+  };
+}
