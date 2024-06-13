@@ -7,7 +7,7 @@ import SearchAutoComplete from "@/components/SearchAutoComplete";
 
 export default function Home() {
   return (
-    <>
+    <main>
       <Border>
         <div className="flex h-[60vh] flex-col items-center justify-center gap-3 text-center">
           <Link href={"/"}>
@@ -25,6 +25,6 @@ export default function Home() {
           />
         </div>
       </Border>
-    </>
+    </main>
   );
 }
