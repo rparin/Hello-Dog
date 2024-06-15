@@ -8,3 +8,7 @@ export function cn(...inputs: ClassValue[]) {
 export function getRandItem(arr: Array<any>) {
   return arr[Math.floor(Math.random() * arr.length)];
 }
+
+export function delay(ms: number) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
