@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { webLogo } from "@/constants/icons";
+import { webLogo } from "@/constants/images";
 import Border from "@/components/Border";
 import SearchAutoComplete from "@/components/SearchAutoComplete";
 import ScaleContainer from "@/components/Scale-Container/ScaleContainer";
@@ -9,6 +9,7 @@ import DogFact from "@/components/DogFact";
 import DogCeoImg from "@/components/DogCeoImg";
 import { DogCeoTable } from "@data/DogCeoTable";
 import { getDogBreedInfo } from "@/lib/actions/DogBreedInfo";
+import LostDog from "@/components/LostDog";
 
 export default async function dogResults({
   params,
@@ -17,9 +18,14 @@ export default async function dogResults({
 }) {
   var dogBreedUrl =
     DogCeoTable[params.dogBreed.replace(/-/g, "_") as keyof typeof DogCeoTable];
+
+  if (!dogBreedUrl) {
+    return <LostDog />;
+  }
+
   const breedInfo = await getDogBreedInfo(params.dogBreed.replace(/_/g, " "));
   return (
-    <>
+    <main>
       <Border>
         <div className="grid h-full w-full grid-cols-2 grid-rows-18 gap-1 p-1 md:grid-cols-15 md:grid-rows-15 lg:grid-cols-17 lg:grid-rows-10">
           <DogFact className="col-span-2 rounded-2xl bg-border md:col-span-8 lg:col-span-7" />
@@ -119,6 +125,6 @@ export default async function dogResults({
           </div>
         </div>
       </Border>
-    </>
+    </main>
   );
 }

@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-import { maleIcon, femaleIcon } from "@/constants/icons";
+import { maleIcon, femaleIcon } from "@/constants/images";
 
 export type infoBarType = {
   name: string;
