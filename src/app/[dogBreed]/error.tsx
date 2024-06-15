@@ -18,12 +18,7 @@ export default function Error({
 
   return (
     <main>
-      <Border
-        styling={{
-          innerClassName:
-            "flex flex-col h-full w-full justify-center text-center gap-5",
-        }}
-      >
+      <Border className="flex h-full w-full flex-col justify-center gap-5 text-center">
         <h1 className="text-2xl leading-none text-black/80 md:text-3xl">
           Sorry we could not fetch your dogs
         </h1>

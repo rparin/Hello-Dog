@@ -1,17 +1,12 @@
 import Image from "next/image";
-import Border from "./Border";
+import Border from "@/components/Border";
 import { lostDogPoster } from "@/constants/images";
 import CountdownNavigateTo from "@/components/CountdownNavigateTo";
 
 export default function LostDog() {
   return (
     <main>
-      <Border
-        styling={{
-          innerClassName:
-            "relative flex h-full flex-col items-center justify-center gap-0 text-center",
-        }}
-      >
+      <Border className="relative flex h-full flex-col items-center justify-center gap-0 text-center">
         <Image
           fill={true}
           src={lostDogPoster.img}
