@@ -14,6 +14,6 @@ export async function getDogFact() {
   if (!result.success) {
     throw new Error("Dog Fact: Invalid API Response format");
   } else {
-    return await result.data;
+    return result.data.data[0].attributes.body;
   }
 }

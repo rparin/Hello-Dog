@@ -1,9 +1,21 @@
 import { cn } from "@/lib/utils";
 import { ExternalLink } from "lucide-react";
 import { getDogFact } from "@/lib/actions/DogFact";
+import { delay } from "@/lib/utils";
 
 export default async function DogFact({ className }: { className?: string }) {
-  const dogFact = await getDogFact();
+  var dogFact =
+    'Upright, stiff, rapid tail movement is not wagging or "friendly" but indicates a dog who\'s rather excited and focused.';
+
+  for (let i = 0; i < 3; i++) {
+    var tempDogFact = await getDogFact();
+    if (tempDogFact.length < dogFact.length) {
+      dogFact = tempDogFact;
+      break;
+    }
+    await delay(200);
+  }
+
   return (
     <div
       className={cn(
@@ -26,7 +38,7 @@ export default async function DogFact({ className }: { className?: string }) {
         Random Dog Fact
       </p>
       <p className="mx-2 text-sm leading-none md:mx-3 lg:mx-4 lg:text-base">
-        {dogFact.data[0].attributes.body}
+        {dogFact}
       </p>
     </div>
   );
