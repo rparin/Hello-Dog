@@ -28,7 +28,7 @@ export default function Infobar({
       <p className="ml-1.5 mr-1.5 border-b border-solid border-black text-xs leading-none md:text-base">
         {barValue.name}
       </p>
-      <div className="mx-1 mt-0.5 flex h-full items-center justify-center rounded-3xl bg-white text-xs md:mx-0.5 md:text-base">
+      <div className="mx-1 mt-0.5 flex h-full max-h-7 items-center justify-center rounded-3xl bg-white text-xs md:mx-0.5 md:text-base">
         {info2 ? (
           <div className="flex justify-center gap-0.5">
             <Image
