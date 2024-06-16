@@ -5,7 +5,7 @@ export async function getCeoDogImage(breedUrl: string) {
   var res;
 
   try {
-    res = await fetch(`https://dog.ceo/api/breed/${breedUrl}/images/random`, {
+    res = await fetch(`https://dog.ceo/api/breed/${breedUrl}/images`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

@@ -1,15 +1,17 @@
 import Link from "next/link";
 import Image from "next/image";
+import { DogCeoTable } from "@data/DogCeoTable";
 import { webLogo } from "@/constants/images";
 import Border from "@/components/Border";
 import SearchAutoComplete from "@/components/SearchAutoComplete";
 import ScaleContainer from "@/components/Scale-Container/ScaleContainer";
 import InfoContainer from "@/components/Info-Container/InfoContainer";
 import DogFact from "@/components/DogFact";
-import DogCeoImg from "@/components/DogCeoImg";
-import { DogCeoTable } from "@data/DogCeoTable";
-import { getDogBreedInfo } from "@/lib/actions/DogBreedInfo";
 import LostDog from "@/components/LostDog";
+import DogImg from "@/components/DogImg";
+import { getDogBreedInfo } from "@/lib/actions/DogBreedInfo";
+import { getCeoDogImage } from "@/lib/actions/DogImageCeo";
+import { getRandItem } from "@/lib/utils";
 
 export default async function dogResults({
   params,
@@ -24,19 +26,34 @@ export default async function dogResults({
   }
 
   const breedInfo = await getDogBreedInfo(params.dogBreed.replace(/_/g, " "));
+  const dogCeoImages = await getCeoDogImage(dogBreedUrl);
+  const altText = `Dog image from https://dog.ceo of type ${dogBreedUrl}`;
+
   return (
     <main>
       <Border>
         <div className="grid h-full w-full grid-cols-2 grid-rows-18 gap-1 p-1 md:grid-cols-15 md:grid-rows-15 lg:grid-cols-17 lg:grid-rows-10">
           <DogFact className="col-span-2 rounded-2xl bg-border md:col-span-8 lg:col-span-7" />
           <div className="relative col-span-1 row-span-2 rounded-2xl md:col-span-7 md:row-span-4 lg:col-span-4 lg:row-span-3">
-            <DogCeoImg className="rounded-2xl" dogBreedUrl={dogBreedUrl} />
+            <DogImg
+              className="rounded-2xl"
+              src={getRandItem(dogCeoImages.message)}
+              alt={altText}
+            />
           </div>
           <div className="relative col-span-1 row-span-5 rounded-2xl md:col-span-4 md:row-span-3 lg:col-span-6 lg:row-span-4">
-            <DogCeoImg className="rounded-2xl" dogBreedUrl={dogBreedUrl} />
+            <DogImg
+              className="rounded-2xl"
+              src={getRandItem(dogCeoImages.message)}
+              alt={altText}
+            />
           </div>
           <div className="relative hidden rounded-2xl md:col-span-4 md:row-span-3 md:block">
-            <DogCeoImg className="rounded-2xl" dogBreedUrl={dogBreedUrl} />
+            <DogImg
+              className="rounded-2xl"
+              src={getRandItem(dogCeoImages.message)}
+              alt={altText}
+            />
           </div>
           <InfoContainer
             className="col-span-1 row-span-3 rounded-2xl px-3 py-2 md:col-span-5 md:col-start-11 md:row-span-3 md:rounded-3xl md:px-5 lg:col-span-3 lg:col-start-8 lg:row-span-2 lg:row-start-7 lg:px-3"
@@ -91,7 +108,11 @@ export default async function dogResults({
             ]}
           ></ScaleContainer>
           <div className="relative col-span-1 row-span-3 rounded-2xl md:col-span-5 md:col-start-11 md:row-span-5 lg:col-span-3 lg:col-start-5 lg:row-span-4 lg:row-start-7">
-            <DogCeoImg className="rounded-2xl" dogBreedUrl={dogBreedUrl} />
+            <DogImg
+              className="rounded-2xl"
+              src={getRandItem(dogCeoImages.message)}
+              alt={altText}
+            />
           </div>
           <ScaleContainer
             className="col-span-1 row-span-6 rounded-2xl px-3 py-2 md:col-span-5 md:row-span-7 md:row-start-5 md:rounded-3xl md:px-5 lg:col-span-3 lg:col-start-5 lg:row-span-5 lg:row-start-2"
@@ -109,19 +130,39 @@ export default async function dogResults({
             ]}
           ></ScaleContainer>
           <div className="relative col-span-1 row-span-3 rounded-2xl md:col-span-5 md:row-span-4 lg:col-span-4 lg:row-span-6 lg:row-start-5">
-            <DogCeoImg className="rounded-2xl" dogBreedUrl={dogBreedUrl} />
+            <DogImg
+              className="rounded-2xl"
+              src={getRandItem(dogCeoImages.message)}
+              alt={altText}
+            />
           </div>
           <div className="relative col-span-1 row-span-3 rounded-2xl md:col-span-5 md:row-span-3 lg:col-span-3 lg:col-start-11 lg:row-span-4">
-            <DogCeoImg className="rounded-2xl" dogBreedUrl={dogBreedUrl} />
+            <DogImg
+              className="rounded-2xl"
+              src={getRandItem(dogCeoImages.message)}
+              alt={altText}
+            />
           </div>
           <div className="relative hidden rounded-2xl md:col-span-5 md:row-span-4 md:row-start-9 md:block lg:col-span-4 lg:row-span-3">
-            <DogCeoImg className="rounded-2xl" dogBreedUrl={dogBreedUrl} />
+            <DogImg
+              className="rounded-2xl"
+              src={getRandItem(dogCeoImages.message)}
+              alt={altText}
+            />
           </div>
           <div className="relative col-span-3 row-span-2 hidden rounded-2xl px-7 lg:block">
-            <DogCeoImg className="rounded-2xl" dogBreedUrl={dogBreedUrl} />
+            <DogImg
+              className="rounded-2xl"
+              src={getRandItem(dogCeoImages.message)}
+              alt={altText}
+            />
           </div>
           <div className="relative col-span-4 row-span-3 hidden rounded-2xl lg:col-start-[14] lg:row-start-5 lg:block">
-            <DogCeoImg className="rounded-2xl" dogBreedUrl={dogBreedUrl} />
+            <DogImg
+              className="rounded-2xl"
+              src={getRandItem(dogCeoImages.message)}
+              alt={altText}
+            />
           </div>
         </div>
       </Border>
