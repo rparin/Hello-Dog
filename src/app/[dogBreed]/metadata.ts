@@ -1,6 +1,6 @@
 import { publicParsedEnv } from "@env/publicEnv";
 import type { Metadata, ResolvingMetadata } from "next";
-import { DESCRIPTION } from "@/constants/webInfo";
+import { DESCRIPTION, PREVIEW } from "@/constants/webInfo";
 
 // const twitter =  {
 //   card: 'Todo: summary_large_image',
@@ -28,7 +28,7 @@ export async function getMetadata({
     siteName: `${publicParsedEnv.NEXT_PUBLIC_CLIENT_URL}`,
     images: [
       {
-        url: "https://raw.githubusercontent.com/rparin/Hello-Dog/main/_preview/Banner.png",
+        url: PREVIEW,
       },
     ],
     // twitter: twitter
