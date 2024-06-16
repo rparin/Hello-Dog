@@ -56,7 +56,7 @@ export default async function dogResults({
             />
           </div>
           <InfoContainer
-            className="col-span-1 row-span-5 row-start-3 gap-3 rounded-2xl px-3 py-2 md:col-span-5 md:col-start-11 md:row-span-3 md:gap-0 md:rounded-3xl md:px-5 lg:col-span-3 lg:col-start-8 lg:row-span-2 lg:row-start-7 lg:px-3"
+            className="col-span-1 row-span-5 row-start-3 gap-2 rounded-2xl px-3 py-2 md:col-span-5 md:col-start-11 md:row-span-3 md:gap-0 md:rounded-3xl md:px-5 lg:col-span-3 lg:col-start-8 lg:row-span-2 lg:row-start-7 lg:px-3"
             title="Physical Stats"
             info={[
               {
