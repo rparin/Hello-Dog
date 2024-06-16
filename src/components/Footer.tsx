@@ -12,8 +12,8 @@ export default function Footer(props: { className?: string }) {
     >
       <p className="line-clamp-1 overflow-auto text-sm">{CR}</p>
       <a
-        href="https://rparin.github.io"
-        aria-label="External link to rparin portfolio website"
+        href="https://github.com/rparin/Hello-Dog"
+        aria-label="External link to github source code"
         target="_blank"
         rel="noopener noreferrer"
       >
