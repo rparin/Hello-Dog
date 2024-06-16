@@ -1,11 +1,11 @@
-import type { Metadata, ResolvingMetadata } from "next";
-import { Props, getMetadata } from "./metadata";
+import { getMetadata } from "./metadata";
 
-export async function generateMetadata(
-  { params, searchParams }: Props,
-  parent: ResolvingMetadata,
-): Promise<Metadata> {
-  return getMetadata({ params, searchParams }, parent);
+export async function generateMetadata({
+  params,
+}: {
+  params: { dogBreed: string };
+}) {
+  return getMetadata({ params });
 }
 
 export default function dogResultsLayout({

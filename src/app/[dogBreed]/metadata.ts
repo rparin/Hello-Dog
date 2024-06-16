@@ -15,13 +15,11 @@ export type Props = {
   searchParams: { [key: string]: string | string[] | undefined };
 };
 
-export async function getMetadata(
-  { params, searchParams }: Props,
-  parent: ResolvingMetadata,
-): Promise<Metadata> {
-  // optionally access and extend (rather than replace) parent metadata
-  // const previousImages = (await parent).openGraph?.images || [];
-
+export async function getMetadata({
+  params,
+}: {
+  params: { dogBreed: string };
+}) {
   const og = {
     type: "website",
     url: `${publicParsedEnv.NEXT_PUBLIC_CLIENT_URL}/${params.dogBreed.replace(/-/g, "_")}`,
