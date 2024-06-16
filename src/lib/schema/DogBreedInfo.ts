@@ -4,7 +4,7 @@ export const DogInfoValueSchema = z.number().lte(5);
 
 export const DogBreedInfoSchema = z
   .array(
-    z.object({
+    z.strictObject({
       name: z.string(),
       image_link: z.string().url(),
       good_with_children: DogInfoValueSchema,
@@ -33,7 +33,7 @@ export const DogBreedInfoSchema = z
   )
   .min(1);
 
-export const DogInfoScaleSchema = z.object({
+export const DogInfoScaleSchema = z.strictObject({
   name: z.string(),
   value: DogInfoValueSchema,
 });

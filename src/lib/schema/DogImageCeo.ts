@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-export const DogImageCeoSchema = z.object({
+export const DogImageCeoSchema = z.strictObject({
   message: z.string(),
   status: z.string(),
 });
