@@ -10,7 +10,6 @@ export async function getCeoDogImage(breedUrl: string) {
       headers: {
         "Content-Type": "application/json",
       },
-      cache: "no-store",
     });
   } catch (error) {
     throw new Error("Dog Ceo Image: Fetch Error", { cause: error });
