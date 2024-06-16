@@ -19,7 +19,7 @@ A website that brings you interesting dog facts, stunning dog images, and detail
 
 <div align="center">
 
-<img max-height=350 alt="demo of Hello-Dog website" src="https://raw.githubusercontent.com/rparin/Hello-Dog/main/_preview/Demo.gif">
+<img max-height=350 alt="demo of Hello-Dog website" src="https://raw.githubusercontent.com/rparin/Hello-Dog/main/_preview/Banner.png">
 
 #### [Website][Website-url]
 

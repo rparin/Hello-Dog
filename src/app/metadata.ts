@@ -9,7 +9,7 @@ const og = {
   siteName: `${publicParsedEnv.NEXT_PUBLIC_CLIENT_URL}`,
   images: [
     {
-      url: "TBD",
+      url: "https://raw.githubusercontent.com/rparin/Hello-Dog/main/_preview/Banner.png",
     },
   ],
 };
