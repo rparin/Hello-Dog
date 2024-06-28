@@ -12,11 +12,7 @@ export default function InfoContainer({
 }) {
   const barItems = info.map((item) => {
     return (
-      <Infobar
-        className="overflow-auto md:mb-1"
-        key={item.name}
-        barValue={item}
-      ></Infobar>
+      <Infobar className="md:mb-1" key={item.name} barValue={item}></Infobar>
     );
   });
 
@@ -28,7 +24,10 @@ export default function InfoContainer({
       )}
     >
       <h1 className="text-base leading-none md:mb-0.5 md:text-xl">{title}</h1>
-      {barItems}
+
+      <div className="flex h-full w-full flex-col overflow-auto">
+        {barItems}
+      </div>
     </div>
   );
 }
