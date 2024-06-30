@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "onchange \"**/*\" -- prettier --write --ignore-unknown {{changed}} && next dev",
+    "dev": "next dev && onchange \"**/*\" -- prettier --write --ignore-unknown {{changed}}",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
