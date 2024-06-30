@@ -4,10 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "pdev": "concurrently --kill-others \"npm run prettier-watch\" \"next dev\"",
+    "pdev": "concurrently --kill-others \"npm run prettier-watch-no-unmatched-error\" \"next dev\"",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "prettier-watch-no-unmatched-error": "onchange \"**/*\" -- prettier --write --no-error-on-unmatched-pattern --ignore-unknown {{changed}}",
     "prettier-watch": "onchange \"**/*\" -- prettier --write --ignore-unknown {{changed}}",
     "prepare": "husky"
   },
