@@ -10,6 +10,7 @@
     "lint": "next lint",
     "prettier-watch-no-unmatched-error": "onchange \"**/*\" -- prettier --write --no-error-on-unmatched-pattern --ignore-unknown {{changed}}",
     "prettier-watch": "onchange \"**/*\" -- prettier --write --ignore-unknown {{changed}}",
+    "prettier-check": "npx prettier . --check",
     "prepare": "husky"
   },
   "dependencies": {
