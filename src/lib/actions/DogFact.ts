@@ -8,7 +8,7 @@ export async function getDogFact() {
     res = await fetch("https://dogapi.dog/api/v2/facts", {
       method: "GET",
       headers: {
-        "Content-Type": "application/vnd.api+json; charset=utf-8",
+        "Content-Type": "application/json",
       },
       cache: "no-store",
     });
