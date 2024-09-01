@@ -55,7 +55,7 @@ This project is licensed under the MIT License - see the [LICENSE][git-license-u
 
 [license.io]: https://img.shields.io/badge/license-MIT-blue.svg
 [license-url]: https://opensource.org/licenses/MIT
-[git-license-url]: https://github.com/rparin/Hello-Dog/blob/main/LICENSE
+[git-license-url]: https://github.com/rparin/Hello-Dog/blob/SpringBoot/LICENSE
 [react-url]: https://react.dev/
 [react-io]: https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB
 [spring-url]: https://spring.io/projects/spring-boot
