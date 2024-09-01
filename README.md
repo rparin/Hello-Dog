@@ -38,13 +38,14 @@ A website that brings you interesting dog facts, stunning dog images, and detail
 [![nextjs-io]][nextjs-url]
 [![tailwind-io]][tailwind-url]
 [![zod-io]][zod-url]
+[![spring-io]][spring-url]
 [![shadcn-io]][shadcn-url]
 
 </div>
 
 ## Credits
 
-I created this application as a learning exercise to gain a deeper understanding of server-side rendering, client-side rendering, NextJs server actions, and data caching.
+I created this application as a learning exercise to gain a deeper understanding of Spring Boot n-tiers architecture.
 
 ## License
 
@@ -57,6 +58,8 @@ This project is licensed under the MIT License - see the [LICENSE][git-license-u
 [git-license-url]: https://github.com/rparin/Hello-Dog/blob/main/LICENSE
 [react-url]: https://react.dev/
 [react-io]: https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB
+[spring-url]: https://spring.io/projects/spring-boot
+[spring-io]: https://img.shields.io/badge/spring%20boot-FFFFFF.svg?style=for-the-badge&logo=spring&logoColor=%6db43d
 [tailwind-url]: https://tailwindcss.com/
 [tailwind-io]: https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white
 [nextjs-url]: https://nextjs.org/
