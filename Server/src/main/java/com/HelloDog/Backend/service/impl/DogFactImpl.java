@@ -1,4 +1,4 @@
-package com.HelloDog.Backend.service.impl.dogFact;
+package com.HelloDog.Backend.service.impl;
 
 import com.HelloDog.Backend.dto.DogFactDto;
 import com.HelloDog.Backend.models.DogFactResponse;
@@ -7,19 +7,23 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 import org.springframework.web.reactive.function.client.WebClient;
 
 @Service
 @Primary
-public class DogFactWebClientImpl implements DogFactService {
+public class DogFactImpl implements DogFactService {
     private final WebClient webClient;
+    private  final RestTemplate restTemplate;
 
     @Autowired
-    public DogFactWebClientImpl(WebClient webClient) {
+    public DogFactImpl(WebClient webClient, RestTemplate restTemplate) {
         this.webClient = webClient;
+        this.restTemplate = restTemplate;
     }
 
     private DogFactDto getDogFactDto(){
+        //DogFactResponse res = restTemplate.getForObject(DOG_FACT_URL, DogFactResponse.class);
         DogFactResponse res = webClient.get().uri(DOG_FACT_URL).retrieve().bodyToMono(DogFactResponse.class).block();
         return new DogFactDto(res.getData().getFirst().getAttributes().getBody());
     }
