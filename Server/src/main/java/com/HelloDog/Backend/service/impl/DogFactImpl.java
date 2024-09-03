@@ -27,7 +27,7 @@ public class DogFactImpl implements DogFactService {
 
     private DogFactDto getDogFactDto(){
         //DogFactResponse res = restTemplate.getForObject(DOG_FACT_URL, DogFactResponse.class);
-        DogFactResponse res = webClient.get().uri(DOG_FACT_URL).retrieve().bodyToMono(DogFactResponse.class).block();
+        DogFactResponse res = webClient.get().uri(DOG_FACT_URI).retrieve().bodyToMono(DogFactResponse.class).block();
         return new DogFactDto(res.getData().getFirst().getAttributes().getBody());
     }
 
