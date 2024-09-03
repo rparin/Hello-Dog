@@ -6,15 +6,17 @@ import java.util.List;
 
 @Data
 public class DogFactResponse {
-    @Data
-    public static class DogFactResDataAttriItem {
-        public String body;
-    }
+    private List<DogFactResDataItem> data;
+
     @Data
     public static class DogFactResDataItem {
-        public String id;
-        public String type;
-        public DogFactResDataAttriItem attributes;
+        private String id;
+        private String type;
+        private DogFactResDataAttriItem attributes;
+
+        @Data
+        public static class DogFactResDataAttriItem {
+            public String body;
+        }
     }
-    private List<DogFactResDataItem> data;
 }
