@@ -9,4 +9,5 @@ import java.util.List;
 @AllArgsConstructor
 public class DogImagesDto {
     private List<String> imgs;
+    private int len;
 }
