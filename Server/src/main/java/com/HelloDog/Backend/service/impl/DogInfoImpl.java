@@ -1,14 +1,19 @@
 package com.HelloDog.Backend.service.impl;
 
 import com.HelloDog.Backend.dto.DogInfoDto;
+import com.HelloDog.Backend.exceptions.DogAPIException;
 import com.HelloDog.Backend.models.DogInfoResponse;
 import com.HelloDog.Backend.service.DogInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
+
 import java.util.Arrays;
+import java.util.List;
 //import org.springframework.web.client.RestTemplate;
 
 @Service
@@ -42,8 +47,15 @@ public class DogInfoImpl implements DogInfoService {
         DogInfoResponse[] res = webClient.get().uri(this.getDogInfoURI(breed))
                 .header(HEADER_NAME_API_KEY, HEADER_VALUE_API_KEY)
                 .header(HEADER_NAME_API_HOST, HEADER_VALUE_API_HOST)
-                .retrieve().bodyToMono(DogInfoResponse[].class).block();
-        return mapToDto(Arrays.stream(res).toList().getFirst());
+                .retrieve()
+                .onStatus(HttpStatusCode::isError, clientResponse -> {
+                    throw new DogAPIException(clientResponse.statusCode());
+                })
+                .bodyToMono(DogInfoResponse[].class).block();
+        if(res == null) throw new DogAPIException(HttpStatus.NOT_FOUND, "Response from API is null");
+        List<DogInfoResponse> resList = Arrays.stream(res).toList();
+        if(resList.isEmpty()) throw new DogAPIException(HttpStatus.NOT_FOUND, "Dog Info not found");
+        return mapToDto(resList.getFirst());
     }
 
     @Override

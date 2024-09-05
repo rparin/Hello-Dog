@@ -1,9 +1,12 @@
 package com.HelloDog.Backend.service.impl;
 
 import com.HelloDog.Backend.dto.DogImagesDto;
+import com.HelloDog.Backend.exceptions.DogAPIException;
 import com.HelloDog.Backend.models.DogImageResponse;
 import com.HelloDog.Backend.service.DogImageService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -31,7 +34,12 @@ public class DogImageImpl implements DogImageService {
 
     private DogImagesDto getDogImageDto(String breed){
         //DogImageResponse res = restTemplate.getForObject(this.getDogImageURI(breed), DogImageResponse.class);
-        DogImageResponse res = webClient.get().uri(this.getDogImageURI(breed)).retrieve().bodyToMono(DogImageResponse.class).block();
+        DogImageResponse res = webClient.get().uri(this.getDogImageURI(breed)).retrieve()
+                .onStatus(HttpStatusCode::isError, clientResponse -> {
+                    throw new DogAPIException(clientResponse.statusCode());
+                })
+                .bodyToMono(DogImageResponse.class).block();
+        if(res == null) throw new DogAPIException(HttpStatus.NOT_FOUND, "Response from API is null");
         return new DogImagesDto(res.getMessage(), res.getMessage().size());
     }
 

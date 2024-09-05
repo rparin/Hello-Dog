@@ -1,9 +1,12 @@
 package com.HelloDog.Backend.service.impl;
 
 import com.HelloDog.Backend.dto.DogFactDto;
+import com.HelloDog.Backend.exceptions.DogAPIException;
 import com.HelloDog.Backend.models.DogFactResponse;
 import com.HelloDog.Backend.service.DogFactService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -27,7 +30,12 @@ public class DogFactImpl implements DogFactService {
 
     private DogFactDto getDogFactDto(){
         //DogFactResponse res = restTemplate.getForObject(DOG_FACT_URL, DogFactResponse.class);
-        DogFactResponse res = webClient.get().uri(DOG_FACT_URI).retrieve().bodyToMono(DogFactResponse.class).block();
+        DogFactResponse res = webClient.get().uri(DOG_FACT_URI).retrieve()
+                .onStatus(HttpStatusCode::isError, clientResponse -> {
+                    throw new DogAPIException(clientResponse.statusCode());
+                })
+                .bodyToMono(DogFactResponse.class).block();
+        if(res == null) throw new DogAPIException(HttpStatus.NOT_FOUND, "Response from API is null");
         return new DogFactDto(res.getData().getFirst().getAttributes().getBody());
     }
 
@@ -39,7 +47,7 @@ public class DogFactImpl implements DogFactService {
     @Override
     public ResponseEntity<DogFactDto> getDogFact(int len) {
         if(len <= DOG_FACT_MAX_LEN){
-            return ResponseEntity.ok(new DogFactDto(null));
+            throw new DogAPIException(HttpStatus.NOT_FOUND, "Dog fact not found");
         }
 
         //x Attempts to get a dog fact within max length
@@ -49,6 +57,6 @@ public class DogFactImpl implements DogFactService {
                 return ResponseEntity.ok(dogFactDto);
             }
         }
-        return ResponseEntity.ok(new DogFactDto(null));
+        throw new DogAPIException(HttpStatus.NOT_FOUND, "Dog fact not found");
     }
 }
