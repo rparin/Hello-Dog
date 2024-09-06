@@ -25,10 +25,8 @@ public class DogController {
     }
 
     @GetMapping("/dogfact")
-    public ResponseEntity<DogFactDto> getDogFact(@RequestParam(value = "max_length", defaultValue = "0", required = false) String len) {
-        if(len.equals("0")) return dogFactService.getDogFact();
-        int maxLen = Integer.parseInt(len);
-        return dogFactService.getDogFact(maxLen);
+    public ResponseEntity<DogFactDto> getDogFact(@RequestParam(value = "max_length", defaultValue = "200", required = false) int len) {
+        return dogFactService.getDogFact(len);
     }
 
     @GetMapping("/dogImage/{breed}")
