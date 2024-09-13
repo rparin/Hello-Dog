@@ -32,7 +32,7 @@ public class DogFactImpl implements DogFactService {
         //DogFactResponse res = restTemplate.getForObject(DOG_FACT_URL, DogFactResponse.class);
         DogFactResponse res = webClient.get().uri(DOG_FACT_URI).retrieve()
                 .onStatus(HttpStatusCode::isError, clientResponse -> {
-                    throw new DogAPIException(clientResponse.statusCode());
+                    throw new DogAPIException(clientResponse.statusCode(), "Error Fetching Dog Fact");
                 })
                 .bodyToMono(DogFactResponse.class).block();
         if(res == null) throw new DogAPIException(HttpStatus.NOT_FOUND, "Response from Dog Fact API is null");

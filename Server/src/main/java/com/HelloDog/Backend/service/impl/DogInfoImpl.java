@@ -49,7 +49,7 @@ public class DogInfoImpl implements DogInfoService {
                 .header(HEADER_NAME_API_HOST, HEADER_VALUE_API_HOST)
                 .retrieve()
                 .onStatus(HttpStatusCode::isError, clientResponse -> {
-                    throw new DogAPIException(clientResponse.statusCode());
+                    throw new DogAPIException(clientResponse.statusCode(),"Error fetching Dog Info");
                 })
                 .bodyToMono(DogInfoResponse[].class).block();
         if(res == null) throw new DogAPIException(HttpStatus.NOT_FOUND, "Response from Dog Info API is null");
