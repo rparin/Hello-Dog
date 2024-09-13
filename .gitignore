@@ -65,6 +65,9 @@ Server/target/
 *.iml
 *.ipr
 
+### Log Folder ###
+Server/logs
+
 ### NetBeans ###
 /nbproject/private/
 /nbbuild/
