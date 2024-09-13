@@ -40,7 +40,7 @@
         </filter>
         <encoder
                 class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
-            <Pattern>%d %p %C{1} [%t] %m%n</Pattern>
+            <Pattern>%n%d %p %C{1} [%t] %m%n</Pattern>
         </encoder>
         <rollingPolicy
                 class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
@@ -56,6 +56,7 @@
 
     <!-- LOG everything at INFO and above level -->
     <root level="info">
+        <appender-ref ref="RollingFile" />
         <appender-ref ref="Console" />
     </root>
 
