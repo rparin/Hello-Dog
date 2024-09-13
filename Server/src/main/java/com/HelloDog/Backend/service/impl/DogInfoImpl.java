@@ -52,7 +52,7 @@ public class DogInfoImpl implements DogInfoService {
                     throw new DogAPIException(clientResponse.statusCode());
                 })
                 .bodyToMono(DogInfoResponse[].class).block();
-        if(res == null) throw new DogAPIException(HttpStatus.NOT_FOUND, "Response from API is null");
+        if(res == null) throw new DogAPIException(HttpStatus.NOT_FOUND, "Response from Dog Info API is null");
         List<DogInfoResponse> resList = Arrays.stream(res).toList();
         if(resList.isEmpty()) throw new DogAPIException(HttpStatus.NOT_FOUND, "Dog Info not found");
         return mapToDto(resList.getFirst());

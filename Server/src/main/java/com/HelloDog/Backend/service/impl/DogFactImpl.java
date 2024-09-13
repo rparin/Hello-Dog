@@ -35,7 +35,7 @@ public class DogFactImpl implements DogFactService {
                     throw new DogAPIException(clientResponse.statusCode());
                 })
                 .bodyToMono(DogFactResponse.class).block();
-        if(res == null) throw new DogAPIException(HttpStatus.NOT_FOUND, "Response from API is null");
+        if(res == null) throw new DogAPIException(HttpStatus.NOT_FOUND, "Response from Dog Fact API is null");
         return new DogFactDto(res.getData().getFirst().getAttributes().getBody());
     }
 

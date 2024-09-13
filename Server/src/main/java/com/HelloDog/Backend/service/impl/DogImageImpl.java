@@ -36,10 +36,10 @@ public class DogImageImpl implements DogImageService {
         //DogImageResponse res = restTemplate.getForObject(this.getDogImageURI(breed), DogImageResponse.class);
         DogImageResponse res = webClient.get().uri(this.getDogImageURI(breed)).retrieve()
                 .onStatus(HttpStatusCode::isError, clientResponse -> {
-                    throw new DogAPIException(clientResponse.statusCode());
+                    throw new DogAPIException(clientResponse.statusCode(), "Dog Images Not found");
                 })
                 .bodyToMono(DogImageResponse.class).block();
-        if(res == null) throw new DogAPIException(HttpStatus.NOT_FOUND, "Response from API is null");
+        if(res == null) throw new DogAPIException(HttpStatus.NOT_FOUND, "Response from Dog Images API is null");
         return new DogImagesDto(res.getMessage(), res.getMessage().size());
     }
 
