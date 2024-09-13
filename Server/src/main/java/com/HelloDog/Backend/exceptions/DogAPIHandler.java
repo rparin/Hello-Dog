@@ -14,7 +14,7 @@ import org.slf4j.Logger;
 @ControllerAdvice(assignableTypes = DogController.class)
 public class DogAPIHandler {
 
-    private static final Logger log = LoggerFactory.getLogger(DogAPIHandler.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(DogAPIHandler.class);
 
     @ExceptionHandler(DogAPIException.class)
     private ResponseEntity<ErrorObject> handleDogAPIException(DogAPIException ex, WebRequest request) {
@@ -22,7 +22,7 @@ public class DogAPIHandler {
         errorObject.setStatusCode(ex.getHttpStatus().value());
         errorObject.setMessage(String.format("%s", ex.getMessage()));
         errorObject.setTimestamp(new Date());
-        log.error("Caught Error in handleDogAPIException", ex);
+        LOGGER.error("Caught Error in handleDogAPIException", ex);
         return new ResponseEntity<>(errorObject, ex.getHttpStatus());
     }
 

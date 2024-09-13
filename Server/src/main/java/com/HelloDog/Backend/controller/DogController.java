@@ -25,7 +25,7 @@ public class DogController {
     private final DogFactService dogFactService;
     private final DogImageService dogImageService;
     private final DogInfoService dogInfoService;
-    private static final Logger log = LoggerFactory.getLogger(DogController.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(DogController.class);
 
     @Autowired
     public DogController(DogFactService dogFactService, DogImageService dogImageService, DogInfoService dogInfoService) {
@@ -36,19 +36,19 @@ public class DogController {
 
     @GetMapping("/dogfact")
     public ResponseEntity<DogFactDto> getDogFact(@RequestParam(value = "max_length", defaultValue = "200", required = false) int len) {
-        log.info(String.format("Getting Dog Fact - Length:%d", len));
+        LOGGER.info("Getting Dog Fact - Length:{}", len);
         return dogFactService.getDogFact(len);
     }
 
     @GetMapping("/dogImage/{breed}")
     public ResponseEntity<DogImagesDto> getDogImgs(@PathVariable String breed) {
-        log.info(String.format("Getting Dog Images - %s", breed));
+        LOGGER.info("Getting Dog Images - {}", breed);
         return dogImageService.getDogImgs(breed);
     }
 
     @GetMapping("/dogInfo/{breed}")
     public ResponseEntity<DogInfoDto> getDogInfo(@PathVariable String breed) {
-        log.info(String.format("Getting Dog Info - %s", breed));
+        LOGGER.info("Getting Dog Info - {}", breed);
         return dogInfoService.getDogInfo(breed);
     }
 }
