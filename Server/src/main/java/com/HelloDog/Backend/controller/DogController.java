@@ -36,19 +36,19 @@ public class DogController {
 
     @GetMapping("/dogfact")
     public ResponseEntity<DogFactDto> getDogFact(@RequestParam(value = "max_length", defaultValue = "200", required = false) int len) {
-        LOGGER.info("Getting Dog Fact - Length:{}", len);
+        LOGGER.debug("Getting Dog Fact - Length:{}", len);
         return dogFactService.getDogFact(len);
     }
 
     @GetMapping("/dogImage/{breed}")
     public ResponseEntity<DogImagesDto> getDogImgs(@PathVariable String breed) {
-        LOGGER.info("Getting Dog Images - {}", breed);
+        LOGGER.debug("Getting Dog Images - {}", breed);
         return dogImageService.getDogImgs(breed);
     }
 
     @GetMapping("/dogInfo/{breed}")
     public ResponseEntity<DogInfoDto> getDogInfo(@PathVariable String breed) {
-        LOGGER.info("Getting Dog Info - {}", breed);
+        LOGGER.debug("Getting Dog Info - {}", breed);
         return dogInfoService.getDogInfo(breed);
     }
 }
