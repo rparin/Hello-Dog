@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
 
-    <property name="LOGS_FOLDER" value="./Server/logs" />
+    <property name="LOGS_FOLDER" value="./logs" />
     <property name="HELLODOG_LOGGER" value="HelloDog-backend-logger" />
 
     <!-- LOG Items to console at INFO level and above -->
