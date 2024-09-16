@@ -2,8 +2,14 @@ package com.HelloDog.Backend.dto;
 
 
 import lombok.Data;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
 
 @Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class DogInfoDto {
     private String name;
     private String img;
