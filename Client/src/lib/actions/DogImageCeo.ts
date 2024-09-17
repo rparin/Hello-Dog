@@ -1,11 +1,12 @@
 "use server";
+import { parsedEnv } from "@env/env";
 import { DogImageCeoSchema } from "../schema/DogImageCeo";
 
 export async function getCeoDogImage(breedUrl: string) {
   var res;
 
   try {
-    res = await fetch(`https://dog.ceo/api/breed/${breedUrl}/images`, {
+    res = await fetch(`${parsedEnv.SERVER_URL}/api/dogImage/${breedUrl}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -28,6 +29,6 @@ export async function getCeoDogImage(breedUrl: string) {
       cause: result.error,
     });
   } else {
-    return await result.data;
+    return result.data;
   }
 }

@@ -6,21 +6,18 @@ export async function getDogBreedInfo(breedName: string) {
   var res;
 
   try {
-    res = await fetch(
-      `https://dogs-by-api-ninjas.p.rapidapi.com/v1/dogs?name=${breedName}`,
-      {
-        method: "GET",
-        headers: {
-          "X-RapidAPI-Key": parsedEnv.X_RapidAPI_Key,
-          "X-RapidAPI-Host": parsedEnv.X_RapidAPI_Host,
-        },
+    res = await fetch(`${parsedEnv.SERVER_URL}/api/dogInfo/${breedName}`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
       },
-    );
+    });
   } catch (error) {
     throw new Error("DogBreedInfo: Fetch Error", { cause: error });
   }
 
   if (!res?.ok) {
+    console.log(res);
     throw new Error("DogBreedInfo: Response Error", {
       cause: `HTTP Response Code: ${res?.status}`,
     });
@@ -33,6 +30,6 @@ export async function getDogBreedInfo(breedName: string) {
       cause: result.error,
     });
   } else {
-    return result.data[0];
+    return result.data;
   }
 }

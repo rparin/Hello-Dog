@@ -1,11 +1,12 @@
 "use server";
+import { parsedEnv } from "@env/env";
 import { DogFactSchema } from "../schema/DogFact";
 
-export async function getDogFact() {
+export async function getDogFact(len: number = 120) {
   var res;
 
   try {
-    res = await fetch("https://dogapi.dog/api/v2/facts", {
+    res = await fetch(`${parsedEnv.SERVER_URL}/api/dogfact?max_length=${len}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -29,6 +30,6 @@ export async function getDogFact() {
       cause: result.error,
     });
   } else {
-    return result.data.data[0].attributes.body;
+    return result.data.dogFact;
   }
 }
