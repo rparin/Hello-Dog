@@ -51,7 +51,6 @@ class DogControllerTest {
     @MockBean
     private DogInfoService dogInfoService;
 
-    @Autowired
     private DogFactDto dogFactDto;
     private DogImagesDto dogImagesDto;
     private DogInfoDto dogInfoDto;
