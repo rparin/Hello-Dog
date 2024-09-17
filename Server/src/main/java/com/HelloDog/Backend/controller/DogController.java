@@ -42,8 +42,9 @@ public class DogController {
 
     @GetMapping("/dogImage/{breed}")
     public ResponseEntity<DogImagesDto> getDogImgs(@PathVariable String breed) {
-        LOGGER.debug("Getting Dog Images - {}", breed);
-        return dogImageService.getDogImgs(breed);
+        final String BREED_URL = breed.replace('_','/');
+        LOGGER.debug("Getting Dog Images - {}", BREED_URL);
+        return dogImageService.getDogImgs(BREED_URL);
     }
 
     @GetMapping("/dogInfo/{breed}")
