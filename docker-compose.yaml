@@ -1,11 +1,23 @@
 services:
+  frontend:
+    image: hellodog-frontend
+    init: true
+    pull_policy: never
+    container_name: hellodog-frontend_c
+    build:
+      context: /Client
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    env_file:
+      - /Client/.env.local
   backend:
     image: hellodog-backend
     init: true
     pull_policy: never
     container_name: hellodog-backend_c
     build:
-      context:  /Server
+      context: /Server
       dockerfile: Dockerfile
     ports:
       - 8080:8080
