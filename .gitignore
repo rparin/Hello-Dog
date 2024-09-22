@@ -1,19 +1,25 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
+Client/node_modules
+Client/.pnp
 /node_modules
 /.pnp
 .pnp.js
 .yarn/install-state.gz
 
 # testing
+Client/coverage
 /coverage
 
 # next.js
+Client/.next/
+Client/out/
 /.next/
 /out/
 
 # production
+Client/build
 /build
 
 # misc
@@ -42,47 +48,7 @@ next-env.d.ts
 ### VS Code ###
 .vscode/
 
-### NextJs Section ###
-
-# dependencies
-Client/node_modules
-Client/.pnp
-.pnp.js
-.yarn/install-state.gz
-
-# testing
-Client/coverage
-
-# next.js
-Client/.next/
-Client/out/
-
-# production
-Client/build
-
-# misc
-.DS_Store
-*.pem
-
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# env files
-.env*.local
-.env
-
-# vercel
-.vercel
-
-# typescript
-*.tsbuildinfo
-next-env.d.ts
-
-
 ### Spring section ###
-
 Server/HELP.md
 Server/target/
 !.mvn/wrapper/maven-wrapper.jar
