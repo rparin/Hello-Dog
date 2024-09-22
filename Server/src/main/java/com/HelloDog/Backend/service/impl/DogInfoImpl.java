@@ -55,7 +55,7 @@ public class DogInfoImpl implements DogInfoService {
         if(res == null) throw new DogAPIException(HttpStatus.NOT_FOUND, "Response from Dog Info API is null");
         List<DogInfoResponse> resList = Arrays.stream(res).toList();
         if(resList.isEmpty()) throw new DogAPIException(HttpStatus.NOT_FOUND, "Dog Info not found");
-        return mapToDto(resList.getFirst());
+        return mapToDto(resList.get(0));
     }
 
     @Override
