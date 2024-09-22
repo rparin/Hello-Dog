@@ -1,0 +1,13 @@
+services:
+  backend:
+    image: hellodog-backend
+    init: true
+    pull_policy: never
+    container_name: hellodog-backend_c
+    build:
+      context:  /Server
+      dockerfile: Dockerfile
+    ports:
+      - 8080:8080
+    env_file:
+      - /Server/src/main/resources/.env
