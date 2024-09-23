@@ -44,7 +44,7 @@ A website that brings you interesting dog facts, stunning dog images, and detail
 
 ## Credits
 
-The purpose of my application is to deepen my understanding of back-end development, with a particular focus on Spring Boot. Through this project, I learned about Spring Boot concepts such as beans, annotations, testing, and mock beans. I also explored foundational back-end principles, including n-tier architecture, dependency injection, inversion of control, data transfer objects (DTO), and model creation, all of which contribute to better software design and maintainability. For deployment purposes, I touched upon Docker and Docker Compose for efficient container management and deployment.
+I created this branch to deepen my understanding of back-end development, with a particular focus on Spring Boot. Through this project, I learned about Spring Boot concepts such as beans, annotations, testing, and mock beans. I also explored foundational back-end principles, including n-tier architecture, dependency injection, inversion of control, data transfer objects (DTO), and model creation, all of which contribute to better software design and maintainability. For deployment purposes, I touched upon Docker and Docker Compose for efficient container management and deployment.
 
 ## License
 
