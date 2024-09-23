@@ -36,16 +36,15 @@ A website that brings you interesting dog facts, stunning dog images, and detail
 
 [![react-io]][react-url]
 [![nextjs-io]][nextjs-url]
-[![tailwind-io]][tailwind-url]
 [![zod-io]][zod-url]
 [![spring-io]][spring-url]
-[![shadcn-io]][shadcn-url]
+[![docker-io]][docker-url]
 
 </div>
 
 ## Credits
 
-I created this application as a learning exercise to gain a deeper understanding of Spring Boot n-tiers architecture.
+The purpose of my application is to deepen my understanding of back-end development, with a particular focus on Spring Boot. Through this project, I learned about Spring Boot concepts such as beans, annotations, testing, and mock beans. I also explored foundational back-end principles, including n-tier architecture, dependency injection, inversion of control, data transfer objects (DTO), and model creation, all of which contribute to better software design and maintainability. For deployment purposes, I touched upon Docker and Docker Compose for efficient container management and deployment.
 
 ## License
 
@@ -68,6 +67,8 @@ This project is licensed under the MIT License - see the [LICENSE][git-license-u
 [Shadcn-io]: https://img.shields.io/badge/shadcn-000000.svg?style=for-the-badge&logo=shadcnui&logoColor=white
 [zod-url]: https://zod.dev/
 [zod-io]: https://img.shields.io/badge/zod-FFFFFF.svg?style=for-the-badge&logo=zod&logoColor=3068b7
+[docker-url]: https://www.docker.com/
+[docker-io]: https://img.shields.io/badge/Docker-FFFFFF.svg?style=for-the-badge&logo=Docker&logoColor=1d63ed
 [Website-url]: https://hello-dog.vercel.app/
 
 <!-- Badges: https://simpleicons.org or https://github.com/simple-icons/simple-icons/blob/master/slugs.md -->
