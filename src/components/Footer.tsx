@@ -12,7 +12,7 @@ export default function Footer(props: { className?: string }) {
     >
       <p className="line-clamp-1 overflow-auto text-sm">{CR}</p>
       <a
-        href="https://github.com/rparin/Hello-Dog"
+        href="https://github.com/rparin/Hello-Dog/tree/SpringBoot"
         aria-label="External link to github source code"
         target="_blank"
         rel="noopener noreferrer"
