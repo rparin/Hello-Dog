@@ -79,12 +79,10 @@ export default async function dogResults({
                   female: `${breedInfo.min_weight_female} - ${breedInfo.max_weight_female}`,
                 },
               },
-            ]}
-          ></InfoContainer>
+            ]}></InfoContainer>
           <Link
             className="col-span-2 row-span-2 flex items-center justify-center md:col-span-5 md:col-start-6 md:row-span-3 md:row-start-5 lg:col-span-3 lg:col-start-8 lg:row-span-2 lg:row-start-4"
-            href={"/"}
-          >
+            href={"/"}>
             <Image
               className="h-full"
               src={webLogo.img}
@@ -105,8 +103,7 @@ export default async function dogResults({
               { name: "Children", value: breedInfo.good_with_children },
               { name: "Strangers", value: breedInfo.good_with_strangers },
               { name: "Other Dogs", value: breedInfo.good_with_other_dogs },
-            ]}
-          ></ScaleContainer>
+            ]}></ScaleContainer>
           <div className="relative col-span-1 row-span-3 rounded-2xl md:col-span-5 md:col-start-11 md:row-span-5 lg:col-span-3 lg:col-start-5 lg:row-span-4 lg:row-start-7">
             <DogImg
               className="rounded-2xl"
@@ -127,8 +124,7 @@ export default async function dogResults({
               { name: "Trainability", value: breedInfo.trainability },
               { name: "Energy", value: breedInfo.energy },
               { name: "Barking", value: breedInfo.barking },
-            ]}
-          ></ScaleContainer>
+            ]}></ScaleContainer>
           <div className="relative col-span-1 row-span-3 rounded-2xl md:col-span-5 md:row-span-4 lg:col-span-4 lg:row-span-6 lg:row-start-5">
             <DogImg
               className="rounded-2xl"
