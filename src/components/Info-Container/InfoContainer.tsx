@@ -20,12 +20,11 @@ export default function InfoContainer({
     <div
       className={cn(
         "flex h-full w-full flex-col items-center bg-accent text-black",
-        className,
-      )}
-    >
+        className
+      )}>
       <h1 className="text-base leading-none md:mb-0.5 md:text-xl">{title}</h1>
 
-      <div className="flex h-full w-full flex-col overflow-auto">
+      <div className="hide-scrollbar flex h-full w-full flex-col overflow-auto">
         {barItems}
       </div>
     </div>

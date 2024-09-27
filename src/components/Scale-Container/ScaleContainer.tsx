@@ -16,8 +16,7 @@ export default function ScaleContainer({
       <Progressbar
         className="md:pb-1"
         key={item.name}
-        barValue={item}
-      ></Progressbar>
+        barValue={item}></Progressbar>
     );
   });
 
@@ -25,11 +24,10 @@ export default function ScaleContainer({
     <div
       className={cn(
         "flex h-full w-full flex-col items-center bg-accent text-black",
-        className,
-      )}
-    >
+        className
+      )}>
       <h1 className="text-base leading-none md:text-xl">{title}</h1>
-      <div className="flex h-full w-full flex-col overflow-auto">
+      <div className="hide-scrollbar flex h-full w-full flex-col overflow-auto">
         {barItems}
       </div>
     </div>
