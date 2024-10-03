@@ -46,7 +46,7 @@ export default function SearchAutoComplete({
           border: "2.5px solid #FFD29D",
           lineColor: "rgba(0,0,0,.35)",
           boxShadow: "rgba(32, 33, 36, 0.28) 0px 1px 12px 0px",
-          fontFamily: "Belanosima",
+          fontFamily: "Belanosima, Franklin Gothic Medium, Arial Black",
         }}
         placeholder={placeholder}
         showIcon={false}
