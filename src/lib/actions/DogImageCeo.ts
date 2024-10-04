@@ -1,4 +1,4 @@
-"use server";
+"server-only";
 import { DogImageCeoSchema } from "../schema/DogImageCeo";
 
 export async function getCeoDogImage(breedUrl: string) {

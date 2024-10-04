@@ -1,4 +1,4 @@
-"use server";
+"server-only";
 import { DogFactSchema } from "../schema/DogFact";
 
 export async function getDogFact() {

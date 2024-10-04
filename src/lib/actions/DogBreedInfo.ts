@@ -1,4 +1,4 @@
-"use server";
+"server-only";
 import { parsedEnv } from "@env/env";
 import { DogBreedInfoSchema } from "../schema/DogBreedInfo";
 
@@ -14,7 +14,7 @@ export async function getDogBreedInfo(breedName: string) {
           "X-RapidAPI-Key": parsedEnv.X_RapidAPI_Key,
           "X-RapidAPI-Host": parsedEnv.X_RapidAPI_Host,
         },
-      },
+      }
     );
   } catch (error) {
     throw new Error("DogBreedInfo: Fetch Error", { cause: error });
