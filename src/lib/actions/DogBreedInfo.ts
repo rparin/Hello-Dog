@@ -11,8 +11,8 @@ export async function getDogBreedInfo(breedName: string) {
       {
         method: "GET",
         headers: {
-          "X-RapidAPI-Key": parsedEnv.X_RapidAPI_Key,
-          "X-RapidAPI-Host": parsedEnv.X_RapidAPI_Host,
+          "X-RapidAPI-Key": parsedEnv.X_RAPIDAPI_KEY,
+          "X-RapidAPI-Host": parsedEnv.X_RAPIDAPI_HOST,
         },
       }
     );
