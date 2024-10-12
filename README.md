@@ -38,6 +38,7 @@ A website that brings you interesting dog facts, stunning dog images, and detail
 [![nextjs-io]][nextjs-url]
 [![tailwind-io]][tailwind-url]
 [![zod-io]][zod-url]
+[![docker-io]][docker-url]
 [![shadcn-io]][shadcn-url]
 
 </div>
@@ -65,6 +66,8 @@ This project is licensed under the MIT License - see the [LICENSE][git-license-u
 [Shadcn-io]: https://img.shields.io/badge/shadcn-000000.svg?style=for-the-badge&logo=shadcnui&logoColor=white
 [zod-url]: https://zod.dev/
 [zod-io]: https://img.shields.io/badge/zod-FFFFFF.svg?style=for-the-badge&logo=zod&logoColor=3068b7
+[docker-url]: https://www.docker.com/
+[docker-io]: https://img.shields.io/badge/Docker-FFFFFF.svg?style=for-the-badge&logo=Docker&logoColor=1d63ed
 [Website-url]: https://hello-dog.vercel.app/
 
 <!-- Badges: https://simpleicons.org or https://github.com/simple-icons/simple-icons/blob/master/slugs.md -->

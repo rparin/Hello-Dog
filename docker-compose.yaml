@@ -1,0 +1,13 @@
+services:
+  frontend:
+    image: hdog-app
+    init: true
+    pull_policy: never
+    container_name: hdog-app_c
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    env_file:
+      - .env.local
