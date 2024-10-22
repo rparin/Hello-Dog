@@ -9,7 +9,7 @@ export default function SearchAutoComplete({
   placeholder,
   autofocus,
 }: {
-  className: string;
+  className?: string;
   autofocus?: boolean;
   placeholder?: string;
 }) {
