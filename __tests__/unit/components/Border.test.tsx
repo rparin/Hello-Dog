@@ -9,3 +9,8 @@ test("should have no accessibility violations", async () => {
   const results = await axe(container);
   expect(results).toHaveNoViolations();
 });
+
+test("it renders component unchanged", () => {
+  const { container } = render(<Border></Border>);
+  expect(container).toMatchSnapshot();
+});

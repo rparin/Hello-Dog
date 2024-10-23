@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it renders component unchanged 1`] = `
+<div>
+  <div
+    class="flex h-full w-full flex-col"
+  >
+    <p
+      class="ml-1.5 mr-1.5 border-b border-solid border-black text-xs leading-none md:text-base"
+    >
+      Energy
+    </p>
+    <div
+      class="mx-1 mt-0.5 h-full max-h-3 min-h-2 rounded-3xl bg-white md:mx-0.5 md:max-h-4 lg:max-h-5"
+    >
+      <div
+        class="h-full rounded-3xl w-3/5 bg-[#E59E24]"
+      />
+    </div>
+  </div>
+</div>
+`;

@@ -17,3 +17,16 @@ test("should have no accessibility violations", async () => {
   const results = await axe(container);
   expect(results).toHaveNoViolations();
 });
+
+test("it renders component unchanged", () => {
+  const { container } = render(
+    <Infobar
+      barValue={{
+        name: "Life Expectancy",
+        value: {
+          other: "12 - 15 years",
+        },
+      }}></Infobar>
+  );
+  expect(container).toMatchSnapshot();
+});

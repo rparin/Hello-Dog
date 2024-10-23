@@ -29,3 +29,10 @@ test("should have no accessibility violations", async () => {
   const results = await act(async () => axe(container));
   expect(results).toHaveNoViolations();
 });
+
+test("it renders component unchanged", () => {
+  const { container } = render(
+    <CountdownNavigateTo href={"/"} countdown={0} />
+  );
+  expect(container).toMatchSnapshot();
+});

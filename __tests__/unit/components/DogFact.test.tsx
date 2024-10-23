@@ -24,3 +24,20 @@ test("it should have no accessibility violations", async () => {
   const results = await axe(container);
   expect(results).toHaveNoViolations();
 });
+
+test("it renders component unchanged", async () => {
+  window.fetch = mockFetch({
+    data: [
+      {
+        id: "115fabfe-ea24-42af-afde-2cdcad7a8502",
+        type: "fact",
+        attributes: {
+          body: "Tired puppies get cranky just like little kids. If you have a fussy puppy, try nap time.",
+        },
+      },
+    ],
+  });
+
+  const { container } = render(await DogFact({ className: "" }));
+  expect(container).toMatchSnapshot();
+});
