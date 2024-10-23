@@ -34,7 +34,7 @@ export default function SearchAutoComplete({
 
   return (
     <form onSubmit={handleOnSubmit} className={className}>
-      <label aria-label="Dog Breed Search Bar">
+      <label aria-label="Dog Breed Search Bar" className={className}>
         <ReactSearchAutocomplete
           className="w-full"
           items={dogBreedList}
