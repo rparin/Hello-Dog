@@ -13,3 +13,12 @@ test("should have no accessibility violations", async () => {
   const results = await axe(container);
   expect(results).toHaveNoViolations();
 });
+
+test("it renders component unchanged", () => {
+  const { container } = render(
+    <ScaleContainer
+      title={"Good With"}
+      scales={[{ name: "Energy", value: 3 }]}></ScaleContainer>
+  );
+  expect(container).toMatchSnapshot();
+});
