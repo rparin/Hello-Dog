@@ -3,7 +3,7 @@ import { Metadata as mData } from "./metadata";
 import { Belanosima } from "next/font/google";
 import "./globals.css";
 
-const font = Belanosima({ weight: "400", subsets: ["latin"] });
+const font = Belanosima({ weight: "400", subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = mData;
 
