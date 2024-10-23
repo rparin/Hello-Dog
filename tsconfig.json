@@ -23,7 +23,8 @@
       "@assets/*": ["./public/assets/*"],
       "@constants/*": ["./src/constants/*"],
       "@data/*": ["./public/data/*"],
-      "@env/*": ["./env/*"]
+      "@env/*": ["./env/*"],
+      "@test-utils/*": ["./__tests__/utils/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
