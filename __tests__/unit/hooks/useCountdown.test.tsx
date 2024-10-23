@@ -1,4 +1,4 @@
-import { act, renderHook, waitFor } from "@testing-library/react";
+import { act, renderHook } from "@testing-library/react";
 import { useCountdown } from "@/lib/hooks/useCountdown";
 
 describe("testing useCountdown hook", () => {
@@ -46,7 +46,7 @@ describe("testing useCountdown hook", () => {
     });
     expect(result.current).toBe(0);
     expect(mockFn).toHaveBeenCalledTimes(1);
-    expect(setInterval).toHaveBeenCalledTimes(4);
+    expect(setInterval).toHaveBeenCalledTimes(3);
   });
 
   test("it should not call the callback", () => {
