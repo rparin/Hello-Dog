@@ -34,25 +34,27 @@ export default function SearchAutoComplete({
 
   return (
     <form onSubmit={handleOnSubmit} className={className}>
-      <ReactSearchAutocomplete
-        className="w-full"
-        items={dogBreedList}
-        onSelect={handleOnSelect}
-        onSearch={handleOnSearch}
-        // formatResult={(result: dogItem) => {
-        //   return <>{result.name.replace(/_/g, "-")}</>;
-        // }}
-        styling={{
-          border: "2.5px solid #FFD29D",
-          lineColor: "rgba(0,0,0,.35)",
-          boxShadow: "rgba(32, 33, 36, 0.28) 0px 1px 12px 0px",
-          fontFamily: "Belanosima, Franklin Gothic Medium, Arial Black",
-        }}
-        placeholder={placeholder}
-        showIcon={false}
-        maxResults={5}
-        autoFocus={autofocus}
-      />
+      <label aria-label="Dog Breed Search Bar">
+        <ReactSearchAutocomplete
+          className="w-full"
+          items={dogBreedList}
+          onSelect={handleOnSelect}
+          onSearch={handleOnSearch}
+          // formatResult={(result: dogItem) => {
+          //   return <>{result.name.replace(/_/g, "-")}</>;
+          // }}
+          styling={{
+            border: "2.5px solid #FFD29D",
+            lineColor: "rgba(0,0,0,.35)",
+            boxShadow: "rgba(32, 33, 36, 0.28) 0px 1px 12px 0px",
+            fontFamily: "Belanosima, Franklin Gothic Medium, Arial Black",
+          }}
+          placeholder={placeholder}
+          showIcon={false}
+          maxResults={5}
+          autoFocus={autofocus}
+        />
+      </label>
     </form>
   );
 }
