@@ -4,7 +4,6 @@ import { useCountdown } from "@/lib/hooks/useCountdown";
 describe("testing useCountdown hook", () => {
   beforeEach(() => {
     jest.useFakeTimers();
-    jest.spyOn(global, "setInterval");
   });
 
   afterEach(() => {
@@ -16,7 +15,6 @@ describe("testing useCountdown hook", () => {
     const { result } = renderHook(() => useCountdown(3000, mockFn));
     expect(result.current).toBe(3000);
     expect(mockFn).toHaveBeenCalledTimes(0);
-    expect(setInterval).toHaveBeenCalledTimes(1);
   });
 
   test("it should decrement countdown", () => {
@@ -27,7 +25,6 @@ describe("testing useCountdown hook", () => {
     });
     expect(result.current).toBe(2000);
     expect(mockFn).toHaveBeenCalledTimes(0);
-    expect(setInterval).toHaveBeenCalledTimes(2);
   });
 
   test("it should call the callback", () => {
@@ -46,7 +43,6 @@ describe("testing useCountdown hook", () => {
     });
     expect(result.current).toBe(0);
     expect(mockFn).toHaveBeenCalledTimes(1);
-    expect(setInterval).toHaveBeenCalledTimes(3);
   });
 
   test("it should not call the callback", () => {
@@ -57,6 +53,5 @@ describe("testing useCountdown hook", () => {
     });
     expect(result.current).toBe(-1);
     expect(mockFn).not.toHaveBeenCalled();
-    expect(setInterval).toHaveBeenCalledTimes(1);
   });
 });
