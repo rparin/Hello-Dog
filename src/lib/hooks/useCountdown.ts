@@ -18,7 +18,7 @@ export const useCountdown = (
       if (time > 0) setTime((prev) => prev - interval);
     }, interval);
 
-    if (time <= 0) callback();
+    if (time == 0) callback();
 
     return () => clearInterval(customInterval);
   }, [time, callback, interval]);
