@@ -4,24 +4,6 @@ import SearchAutoComplete from "@/components/SearchAutoComplete";
 
 expect.extend(toHaveNoViolations);
 
-jest.mock("next/navigation", () => ({
-  useRouter() {
-    return {
-      route: "/",
-      pathname: "",
-      query: "",
-      asPath: "",
-      push: jest.fn(),
-      events: {
-        on: jest.fn(),
-        off: jest.fn(),
-      },
-      beforePopState: jest.fn(() => null),
-      prefetch: jest.fn(() => null),
-    };
-  },
-}));
-
 test("it should have no accessibility violations", async () => {
   const { container } = render(<SearchAutoComplete />);
   const results = await act(async () => axe(container));
