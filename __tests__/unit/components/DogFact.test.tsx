@@ -26,18 +26,18 @@ beforeAll(() => {
 });
 
 test("it should have no accessibility violations", async () => {
-  const { container } = render(await DogFact({ className: "" }));
+  const { container } = render(await DogFact({}));
   const results = await axe(container);
   expect(results).toHaveNoViolations();
 });
 
 test("it renders component unchanged", async () => {
-  const { container } = render(await DogFact({ className: "" }));
+  const { container } = render(await DogFact({}));
   expect(container).toMatchSnapshot();
 });
 
 test("it should show the dog fact", async () => {
-  render(await DogFact({ className: "" }));
+  render(await DogFact({}));
   const dogFact = screen.getByText(DOG_FACT);
   expect(dogFact).toBeInTheDocument();
 });
