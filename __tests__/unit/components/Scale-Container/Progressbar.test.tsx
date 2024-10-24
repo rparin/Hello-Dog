@@ -1,4 +1,5 @@
-import { render } from "@testing-library/react";
+import "@testing-library/jest-dom";
+import { render, screen } from "@testing-library/react";
 import { axe, toHaveNoViolations } from "jest-axe";
 import Progressbar from "@/components/Scale-Container/Progressbar";
 
@@ -17,4 +18,10 @@ test("it renders component unchanged", () => {
     <Progressbar barValue={{ name: "Energy", value: 3 }}></Progressbar>
   );
   expect(container).toMatchSnapshot();
+});
+
+test("it shows progress bar name", () => {
+  render(<Progressbar barValue={{ name: "Energy", value: 3 }}></Progressbar>);
+  const pbarNameElement = screen.getByText("Energy");
+  expect(pbarNameElement).toBeInTheDocument();
 });

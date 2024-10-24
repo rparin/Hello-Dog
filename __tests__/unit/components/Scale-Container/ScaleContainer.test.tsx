@@ -1,4 +1,5 @@
-import { render } from "@testing-library/react";
+import "@testing-library/jest-dom";
+import { render, screen } from "@testing-library/react";
 import { axe, toHaveNoViolations } from "jest-axe";
 import ScaleContainer from "@/components/Scale-Container/ScaleContainer";
 
@@ -21,4 +22,15 @@ test("it renders component unchanged", () => {
       scales={[{ name: "Energy", value: 3 }]}></ScaleContainer>
   );
   expect(container).toMatchSnapshot();
+});
+
+test("it shows Scale title", () => {
+  render(
+    <ScaleContainer
+      title={"Good With"}
+      scales={[{ name: "Energy", value: 3 }]}></ScaleContainer>
+  );
+
+  const scaleTitleElement = screen.getByText("Good With");
+  expect(scaleTitleElement).toBeInTheDocument();
 });
