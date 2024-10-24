@@ -71,3 +71,22 @@ test("it should call useRouter when suggestion is clicked", async () => {
   //Router is called once on render, another on suggestion click
   expect(routerSpy).toHaveBeenCalledTimes(2);
 });
+
+test("it should call onSubmit on userInput enter", async () => {
+  render(<SearchAutoComplete />);
+
+  const handleOnSubmitMock = jest.fn();
+  const formElement = screen.getByRole("form");
+  formElement.onsubmit = handleOnSubmitMock;
+
+  const SEARCH = "corgi";
+  const inputElement = screen.getByRole("textbox") as HTMLInputElement;
+  expect(inputElement).toBeInTheDocument();
+  fireEvent.change(inputElement, { target: { value: SEARCH } });
+  expect(inputElement.value).toBe(SEARCH);
+
+  expect(handleOnSubmitMock).not.toHaveBeenCalled();
+
+  fireEvent.submit(formElement);
+  expect(handleOnSubmitMock).toHaveBeenCalled();
+});

@@ -33,7 +33,7 @@ export default function SearchAutoComplete({
   };
 
   return (
-    <form onSubmit={handleOnSubmit} className={className}>
+    <form aria-label="form" onSubmit={handleOnSubmit} className={className}>
       <label aria-label="Dog Breed Search Bar" className={className}>
         <ReactSearchAutocomplete
           className="w-full"
