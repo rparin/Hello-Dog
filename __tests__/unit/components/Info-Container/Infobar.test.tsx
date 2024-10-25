@@ -21,6 +21,12 @@ test("it shows Infobar name", () => {
   expect(infobarNameElement).toBeInTheDocument();
 });
 
+test("it shows Infobar other value", () => {
+  render(<Infobar barValue={PROPS}></Infobar>);
+  const infobarValueElement = screen.getByText(PROPS.value.other);
+  expect(infobarValueElement).toBeInTheDocument();
+});
+
 expect.extend(toHaveNoViolations);
 test("should have no accessibility violations", async () => {
   const { container } = render(<Infobar barValue={PROPS}></Infobar>);
