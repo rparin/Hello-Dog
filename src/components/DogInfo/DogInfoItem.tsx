@@ -7,7 +7,7 @@ export type dogInfoType = {
   value: { male?: string; female?: string; other?: string };
 };
 
-export default function Infobar({
+export default function DogInfoItem({
   className,
   dogInfo,
 }: {
