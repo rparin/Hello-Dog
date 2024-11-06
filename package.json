@@ -12,13 +12,14 @@
     "prettier-watch": "onchange \"**/*\" -- prettier --write --ignore-unknown {{changed}}",
     "prettier-check": "npx prettier . --check",
     "prepare": "husky",
-    "test": "jest",
-    "test:watch": "jest --watch"
+    "test": "cross-env NODE_ENV=test jest __tests__",
+    "test:watch": "cross-env NODE_ENV=test jest --watch __tests__"
   },
   "dependencies": {
     "@types/jest-axe": "^3.5.9",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "cross-env": "^7.0.3",
     "lucide-react": "^0.383.0",
     "next": "^14.2.13",
     "onchange": "^7.1.0",
