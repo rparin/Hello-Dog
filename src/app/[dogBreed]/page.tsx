@@ -4,9 +4,9 @@ import Border from "@/components/Border";
 import DogImg from "@/components/DogImg";
 import DogFact from "@/components/DogFact";
 import LostDog from "@/components/LostDog";
-import DogInfoList from "@/components/DogInfo/DogInfoList";
+import DogInfoContainer from "@/components/DogInfo/DogInfoContainer";
 import SearchAutoComplete from "@/components/SearchAutoComplete";
-import ProgressbarList from "@/components/Progressbar/ProgressBarList";
+import ProgressbarContainer from "@/components/Progressbar/ProgressBarContainer";
 import { DogCeoTable } from "@data/DogCeoTable";
 import { getRandItem } from "@/lib/utils";
 import { webLogo } from "@/constants/images";
@@ -55,7 +55,7 @@ export default async function dogResults({
               alt={`${altText} #3`}
             />
           </div>
-          <DogInfoList
+          <DogInfoContainer
             className="col-span-1 row-span-5 row-start-3 gap-2 rounded-2xl px-3 py-2 md:col-span-5 md:col-start-11 md:row-span-3 md:gap-0 md:rounded-3xl md:px-5 lg:col-span-3 lg:col-start-8 lg:row-span-2 lg:row-start-7 lg:px-3"
             title="Physical Stats"
             info={[
@@ -79,7 +79,7 @@ export default async function dogResults({
                   female: `${breedInfo.min_weight_female} - ${breedInfo.max_weight_female}`,
                 },
               },
-            ]}></DogInfoList>
+            ]}></DogInfoContainer>
           <Link
             className="col-span-2 row-span-2 flex items-center justify-center md:col-span-5 md:col-start-6 md:row-span-3 md:row-start-5 lg:col-span-3 lg:col-start-8 lg:row-span-2 lg:row-start-4"
             href={"/"}>
@@ -96,14 +96,14 @@ export default async function dogResults({
               placeholder={breedInfo.name}
             />
           </div>
-          <ProgressbarList
+          <ProgressbarContainer
             className="col-span-1 row-span-3 gap-2 rounded-2xl px-3 py-2 md:col-span-5 md:col-start-11 md:row-span-3 md:gap-1 md:rounded-3xl md:px-5 lg:col-span-3 lg:col-start-11 lg:row-span-2"
             title="Good With"
             scales={[
               { name: "Children", value: breedInfo.good_with_children },
               { name: "Strangers", value: breedInfo.good_with_strangers },
               { name: "Other Dogs", value: breedInfo.good_with_other_dogs },
-            ]}></ProgressbarList>
+            ]}></ProgressbarContainer>
           <div className="relative col-span-1 row-span-3 rounded-2xl md:col-span-5 md:col-start-11 md:row-span-5 lg:col-span-3 lg:col-start-5 lg:row-span-4 lg:row-start-7">
             <DogImg
               className="rounded-2xl"
@@ -111,7 +111,7 @@ export default async function dogResults({
               alt={`${altText} #5`}
             />
           </div>
-          <ProgressbarList
+          <ProgressbarContainer
             className="col-span-1 row-span-6 rounded-2xl px-3 py-2 md:col-span-5 md:row-span-7 md:row-start-5 md:rounded-3xl md:px-5 lg:col-span-3 lg:col-start-5 lg:row-span-5 lg:row-start-2"
             title="Characteristics"
             scales={[
@@ -124,7 +124,7 @@ export default async function dogResults({
               { name: "Trainability", value: breedInfo.trainability },
               { name: "Energy", value: breedInfo.energy },
               { name: "Barking", value: breedInfo.barking },
-            ]}></ProgressbarList>
+            ]}></ProgressbarContainer>
           <div className="relative col-span-1 row-span-3 rounded-2xl md:col-span-5 md:row-span-4 lg:col-span-4 lg:row-span-6 lg:row-start-5">
             <DogImg
               className="rounded-2xl"

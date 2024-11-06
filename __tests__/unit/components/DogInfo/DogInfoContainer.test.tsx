@@ -1,7 +1,7 @@
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
 import { axe, toHaveNoViolations } from "jest-axe";
-import InfoContainer from "@/components/DogInfo/DogInfoList";
+import DogInfoContainer from "@/components/DogInfo/DogInfoContainer";
 
 const PROPS = {
   title: "Physical Stats",
@@ -15,14 +15,18 @@ const PROPS = {
 
 test("it renders component unchanged", () => {
   const { container } = render(
-    <InfoContainer title={PROPS.title} info={[PROPS.info1]}></InfoContainer>
+    <DogInfoContainer
+      title={PROPS.title}
+      info={[PROPS.info1]}></DogInfoContainer>
   );
   expect(container).toMatchSnapshot();
 });
 
 test("it should show Info container title", () => {
   render(
-    <InfoContainer title={PROPS.title} info={[PROPS.info1]}></InfoContainer>
+    <DogInfoContainer
+      title={PROPS.title}
+      info={[PROPS.info1]}></DogInfoContainer>
   );
   const infoTitleElement = screen.getByText(PROPS.title);
   expect(infoTitleElement).toBeInTheDocument();
@@ -31,7 +35,9 @@ test("it should show Info container title", () => {
 expect.extend(toHaveNoViolations);
 test("should have no accessibility violations", async () => {
   const { container } = render(
-    <InfoContainer title={PROPS.title} info={[PROPS.info1]}></InfoContainer>
+    <DogInfoContainer
+      title={PROPS.title}
+      info={[PROPS.info1]}></DogInfoContainer>
   );
   const results = await axe(container);
   expect(results).toHaveNoViolations();

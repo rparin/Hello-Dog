@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 import { DogInfoItem } from "@/lib/schema/DogBreedInfo";
 import ProgressbarItem from "@/components/Progressbar/ProgressbarItem";
 
-export default function ProgressbarList({
+export default function ProgressbarContainer({
   className,
   title,
   scales,

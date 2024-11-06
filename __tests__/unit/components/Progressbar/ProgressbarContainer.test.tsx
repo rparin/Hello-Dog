@@ -1,7 +1,7 @@
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
 import { axe, toHaveNoViolations } from "jest-axe";
-import ProgressbarList from "@/components/Progressbar/ProgressBarList";
+import ProgressbarContainer from "@/components/Progressbar/ProgressBarContainer";
 
 const PROPS = {
   title: "Characteristics",
@@ -11,18 +11,18 @@ const PROPS = {
 
 test("it renders component unchanged", () => {
   const { container } = render(
-    <ProgressbarList
+    <ProgressbarContainer
       title={PROPS.title}
-      scales={[PROPS.scale1, PROPS.scale2]}></ProgressbarList>
+      scales={[PROPS.scale1, PROPS.scale2]}></ProgressbarContainer>
   );
   expect(container).toMatchSnapshot();
 });
 
 test("it shows scale title", () => {
   render(
-    <ProgressbarList
+    <ProgressbarContainer
       title={PROPS.title}
-      scales={[PROPS.scale1, PROPS.scale2]}></ProgressbarList>
+      scales={[PROPS.scale1, PROPS.scale2]}></ProgressbarContainer>
   );
 
   const scaleTitleElement = screen.getByText(PROPS.title);
@@ -32,9 +32,9 @@ test("it shows scale title", () => {
 expect.extend(toHaveNoViolations);
 test("it should have no accessibility violations", async () => {
   const { container } = render(
-    <ProgressbarList
+    <ProgressbarContainer
       title={PROPS.title}
-      scales={[PROPS.scale1, PROPS.scale2]}></ProgressbarList>
+      scales={[PROPS.scale1, PROPS.scale2]}></ProgressbarContainer>
   );
   const results = await axe(container);
   expect(results).toHaveNoViolations();
