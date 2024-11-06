@@ -19,16 +19,22 @@ exports[`it renders component unchanged 1`] = `
           srcset="/_next/image?url=%2Fimg.jpg&w=640&q=75 640w, /_next/image?url=%2Fimg.jpg&w=750&q=75 750w, /_next/image?url=%2Fimg.jpg&w=828&q=75 828w, /_next/image?url=%2Fimg.jpg&w=1080&q=75 1080w, /_next/image?url=%2Fimg.jpg&w=1200&q=75 1200w, /_next/image?url=%2Fimg.jpg&w=1920&q=75 1920w, /_next/image?url=%2Fimg.jpg&w=2048&q=75 2048w, /_next/image?url=%2Fimg.jpg&w=3840&q=75 3840w"
           style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
         />
-        <h2
+        <h1
           class="absolute bottom-0 w-full bg-border pt-1 leading-none text-black/80"
         >
-          Returning to the home page in:
+          <a
+            aria-label="Link to home page"
+            class="underline"
+            href="/"
+          >
+            Returning to the home page in:
+          </a>
           <span
-            class="pl-1"
+            class="pl-1 no-underline"
           >
             5
           </span>
-        </h2>
+        </h1>
       </div>
       <section
         class="z-50 mx-auto flex w-full items-center justify-center gap-0.5 pt-1 text-black opacity-70 md:pt-3.5"
@@ -39,7 +45,7 @@ exports[`it renders component unchanged 1`] = `
           ©️ 2024. Designed and Developed by Ralph Parin.
         </p>
         <a
-          aria-label="External link to github source code"
+          aria-label="Github Source Code"
           href="https://github.com/rparin/Hello-Dog/tree/SpringBoot"
           rel="noopener noreferrer"
           target="_blank"

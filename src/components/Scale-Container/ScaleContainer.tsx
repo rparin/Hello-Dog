@@ -26,10 +26,13 @@ export default function ScaleContainer({
         "flex h-full w-full flex-col items-center bg-accent text-black",
         className
       )}>
-      <h1 className="text-base leading-none md:text-xl">{title}</h1>
-      <div className="hide-scrollbar flex h-full w-full flex-col overflow-auto">
+      <h2 className="text-base leading-none md:text-xl">{title}</h2>
+      <ul
+        tabIndex={0}
+        aria-label={`${title}`}
+        className="hide-scrollbar flex h-full w-full flex-col overflow-auto">
         {barItems}
-      </div>
+      </ul>
     </div>
   );
 }

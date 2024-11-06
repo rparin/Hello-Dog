@@ -76,7 +76,7 @@ test("it should call onSubmit on userInput enter", async () => {
   render(<SearchAutoComplete />);
 
   const handleOnSubmitMock = jest.fn();
-  const formElement = screen.getByRole("form");
+  const formElement = screen.getByRole("search");
   formElement.onsubmit = handleOnSubmitMock;
 
   const SEARCH = "corgi";

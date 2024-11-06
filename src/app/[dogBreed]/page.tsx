@@ -21,13 +21,13 @@ export default async function dogResults({
   var dogBreedUrl =
     DogCeoTable[params.dogBreed.replace(/-/g, "_") as keyof typeof DogCeoTable];
 
-  if (!dogBreedUrl) {
+  if (dogBreedUrl) {
     return <LostDog />;
   }
 
   const breedInfo = await getDogBreedInfo(params.dogBreed.replace(/_/g, " "));
   const dogCeoImages = await getCeoDogImage(dogBreedUrl);
-  const altText = `Dog image from https://dog.ceo of type ${dogBreedUrl}`;
+  const altText = `${breedInfo.name} image from Dog.ceo`;
 
   return (
     <main>
@@ -38,21 +38,21 @@ export default async function dogResults({
             <DogImg
               className="rounded-2xl"
               src={getRandItem(dogCeoImages.message)}
-              alt={altText}
+              alt={`${altText} #1`}
             />
           </div>
           <div className="relative col-span-1 row-span-5 rounded-2xl md:col-span-4 md:row-span-3 lg:col-span-6 lg:row-span-4">
             <DogImg
               className="rounded-2xl"
               src={getRandItem(dogCeoImages.message)}
-              alt={altText}
+              alt={`${altText} #2`}
             />
           </div>
           <div className="relative hidden rounded-2xl md:col-span-4 md:row-span-3 md:block">
             <DogImg
               className="rounded-2xl"
               src={getRandItem(dogCeoImages.message)}
-              alt={altText}
+              alt={`${altText} #3`}
             />
           </div>
           <InfoContainer
@@ -108,7 +108,7 @@ export default async function dogResults({
             <DogImg
               className="rounded-2xl"
               src={getRandItem(dogCeoImages.message)}
-              alt={altText}
+              alt={`${altText} #5`}
             />
           </div>
           <ScaleContainer
@@ -129,35 +129,35 @@ export default async function dogResults({
             <DogImg
               className="rounded-2xl"
               src={getRandItem(dogCeoImages.message)}
-              alt={altText}
+              alt={`${altText} #6`}
             />
           </div>
           <div className="relative col-span-1 row-span-3 rounded-2xl md:col-span-5 md:row-span-3 lg:col-span-3 lg:col-start-11 lg:row-span-4">
             <DogImg
               className="rounded-2xl"
               src={getRandItem(dogCeoImages.message)}
-              alt={altText}
+              alt={`${altText} #7`}
             />
           </div>
           <div className="relative hidden rounded-2xl md:col-span-5 md:row-span-4 md:row-start-9 md:block lg:col-span-4 lg:row-span-3">
             <DogImg
               className="rounded-2xl"
               src={getRandItem(dogCeoImages.message)}
-              alt={altText}
+              alt={`${altText} #8`}
             />
           </div>
           <div className="relative col-span-3 row-span-2 hidden rounded-2xl px-7 lg:block">
             <DogImg
               className="rounded-2xl"
               src={getRandItem(dogCeoImages.message)}
-              alt={altText}
+              alt={`${altText} #9`}
             />
           </div>
           <div className="relative col-span-4 row-span-3 hidden rounded-2xl lg:col-start-[14] lg:row-start-5 lg:block">
             <DogImg
               className="rounded-2xl"
               src={getRandItem(dogCeoImages.message)}
-              alt={altText}
+              alt={`${altText} #10`}
             />
           </div>
         </div>

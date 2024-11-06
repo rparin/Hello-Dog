@@ -11,7 +11,7 @@ exports[`it renders component unchanged 1`] = `
       ©️ 2024. Designed and Developed by Ralph Parin.
     </p>
     <a
-      aria-label="External link to github source code"
+      aria-label="Github Source Code"
       href="https://github.com/rparin/Hello-Dog/tree/SpringBoot"
       rel="noopener noreferrer"
       target="_blank"

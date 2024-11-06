@@ -13,7 +13,7 @@ type Icon = {
 
 const webLogo = {
   img: webImg,
-  alt: "Hello Dog website logo",
+  alt: "Hello Dog Website logo",
 };
 
 const lostDogPoster = {

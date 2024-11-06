@@ -3,7 +3,7 @@
 exports[`it renders component unchanged 1`] = `
 <div>
   <form
-    aria-label="form"
+    role="search"
   >
     <label
       aria-label="Dog Breed Search Bar"

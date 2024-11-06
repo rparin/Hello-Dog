@@ -5,15 +5,17 @@ exports[`it renders component unchanged 1`] = `
   <div
     class="flex h-full w-full flex-col items-center bg-accent text-black"
   >
-    <h1
+    <h2
       class="text-base leading-none md:text-xl"
     >
       Characteristics
-    </h1>
-    <div
+    </h2>
+    <ul
+      aria-label="Characteristics"
       class="hide-scrollbar flex h-full w-full flex-col overflow-auto"
+      tabindex="0"
     >
-      <div
+      <li
         class="flex h-full w-full flex-col md:pb-1"
       >
         <p
@@ -26,10 +28,17 @@ exports[`it renders component unchanged 1`] = `
         >
           <div
             class="h-full rounded-3xl w-1/5 bg-[#F03F4B]"
-          />
+          >
+            <p
+              class="sr-only"
+            >
+              1
+              /5
+            </p>
+          </div>
         </div>
-      </div>
-      <div
+      </li>
+      <li
         class="flex h-full w-full flex-col md:pb-1"
       >
         <p
@@ -42,10 +51,17 @@ exports[`it renders component unchanged 1`] = `
         >
           <div
             class="h-full rounded-3xl w-4/5 bg-[#9ACA3C]"
-          />
+          >
+            <p
+              class="sr-only"
+            >
+              4
+              /5
+            </p>
+          </div>
         </div>
-      </div>
-    </div>
+      </li>
+    </ul>
   </div>
 </div>
 `;

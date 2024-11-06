@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 import Border from "@/components/Border";
 import { lostDogPoster } from "@/constants/images";
@@ -13,10 +14,16 @@ export default function LostDog() {
           alt={lostDogPoster.alt}
           priority
         />
-        <h2 className="absolute bottom-0 w-full bg-border pt-1 leading-none text-black/80">
-          Returning to the home page in:
-          <CountdownNavigateTo className="pl-1" href={"/"} countdown={5000} />
-        </h2>
+        <h1 className="absolute bottom-0 w-full bg-border pt-1 leading-none text-black/80">
+          <Link aria-label="Link to home page" className="underline" href={"/"}>
+            Returning to the home page in:
+          </Link>
+          <CountdownNavigateTo
+            className="pl-1 no-underline"
+            href={"/"}
+            countdown={5000}
+          />
+        </h1>
       </Border>
     </main>
   );

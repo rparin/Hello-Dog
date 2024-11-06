@@ -24,7 +24,7 @@ export default function Infobar({
   }
 
   return (
-    <div className={cn("flex h-full w-full flex-col", className)}>
+    <li className={cn("flex h-full w-full flex-col", className)}>
       <p className="ml-1.5 mr-1.5 border-b border-solid border-black text-xs leading-none md:text-base">
         {barValue.name}
       </p>
@@ -50,6 +50,6 @@ export default function Infobar({
           <p className="leading-none">{info}</p>
         )}
       </div>
-    </div>
+    </li>
   );
 }

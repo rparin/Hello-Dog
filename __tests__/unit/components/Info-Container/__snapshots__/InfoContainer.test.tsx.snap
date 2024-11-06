@@ -5,16 +5,18 @@ exports[`it renders component unchanged 1`] = `
   <div
     class="flex h-full w-full flex-col items-center bg-accent text-black"
   >
-    <h1
+    <h2
       class="text-base leading-none md:mb-0.5 md:text-xl"
     >
       Physical Stats
-    </h1>
-    <div
+    </h2>
+    <ul
+      aria-label="Physical Stats"
       class="hide-scrollbar flex h-full w-full flex-col overflow-auto"
+      tabindex="0"
     >
-      <div
-        class="flex h-full w-full flex-col md:mb-1"
+      <li
+        class="flex h-full w-full flex-col md:pb-1"
       >
         <p
           class="ml-1.5 mr-1.5 border-b border-solid border-black text-xs leading-none md:text-base"
@@ -30,8 +32,8 @@ exports[`it renders component unchanged 1`] = `
             12 - 15 years
           </p>
         </div>
-      </div>
-    </div>
+      </li>
+    </ul>
   </div>
 </div>
 `;

@@ -17,7 +17,7 @@ export default function Progressbar({
     5: "w-full bg-[#55B949]",
   };
   return (
-    <div className={cn("flex h-full w-full flex-col", className)}>
+    <li className={cn("flex h-full w-full flex-col", className)}>
       <p className="ml-1.5 mr-1.5 border-b border-solid border-black text-xs leading-none md:text-base">
         {barValue.name}
       </p>
@@ -25,10 +25,11 @@ export default function Progressbar({
         <div
           className={cn(
             "h-full rounded-3xl",
-            scale[barValue.value as keyof typeof scale],
-          )}
-        ></div>
+            scale[barValue.value as keyof typeof scale]
+          )}>
+          <p className="sr-only">{barValue.value}/5</p>
+        </div>
       </div>
-    </div>
+    </li>
   );
 }

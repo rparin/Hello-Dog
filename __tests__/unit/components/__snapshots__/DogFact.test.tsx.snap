@@ -6,7 +6,7 @@ exports[`it renders component unchanged 1`] = `
     class="relative flex h-full flex-col justify-center text-start text-black md:gap-0.5 lg:gap-1"
   >
     <div
-      class="absolute right-3 top-0.5 z-50 flex w-full justify-end gap-1 text-xs opacity-40 lg:right-5"
+      class="absolute right-3 top-0.5 z-50 flex w-full justify-end gap-1 text-xs opacity-60 lg:right-5"
     >
       <p
         class="leading-none"
@@ -14,7 +14,7 @@ exports[`it renders component unchanged 1`] = `
         Powered by Stratonauts Dog API
       </p>
       <a
-        aria-label="External link to Stratonauts Dog API"
+        aria-label="Stratonauts Dog API"
         href="https://dogapi.dog"
         rel="noopener noreferrer"
         target="_blank"
@@ -43,11 +43,11 @@ exports[`it renders component unchanged 1`] = `
         </svg>
       </a>
     </div>
-    <p
+    <h1
       class="mx-2 text-start text-base leading-none underline md:mx-3 lg:text-center lg:text-xl xl:mb-0.5"
     >
       Random Dog Fact
-    </p>
+    </h1>
     <p
       class="mx-2 text-sm leading-none md:mx-3 lg:mx-4 lg:text-base"
     >

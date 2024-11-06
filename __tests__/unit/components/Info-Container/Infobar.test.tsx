@@ -11,25 +11,41 @@ const PROPS = {
 };
 
 test("it renders component unchanged", () => {
-  const { container } = render(<Infobar barValue={PROPS}></Infobar>);
+  const { container } = render(
+    <ul>
+      <Infobar barValue={PROPS}></Infobar>
+    </ul>
+  );
   expect(container).toMatchSnapshot();
 });
 
 test("it shows Infobar name", () => {
-  render(<Infobar barValue={PROPS}></Infobar>);
+  render(
+    <ul>
+      <Infobar barValue={PROPS}></Infobar>
+    </ul>
+  );
   const infobarNameElement = screen.getByText(PROPS.name);
   expect(infobarNameElement).toBeInTheDocument();
 });
 
 test("it shows Infobar other value", () => {
-  render(<Infobar barValue={PROPS}></Infobar>);
+  render(
+    <ul>
+      <Infobar barValue={PROPS}></Infobar>
+    </ul>
+  );
   const infobarValueElement = screen.getByText(PROPS.value.other);
   expect(infobarValueElement).toBeInTheDocument();
 });
 
 expect.extend(toHaveNoViolations);
 test("should have no accessibility violations", async () => {
-  const { container } = render(<Infobar barValue={PROPS}></Infobar>);
+  const { container } = render(
+    <ul>
+      <Infobar barValue={PROPS}></Infobar>
+    </ul>
+  );
   const results = await axe(container);
   expect(results).toHaveNoViolations();
 });

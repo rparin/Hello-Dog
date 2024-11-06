@@ -2,23 +2,25 @@
 
 exports[`it renders component unchanged 1`] = `
 <div>
-  <div
-    class="flex h-full w-full flex-col"
-  >
-    <p
-      class="ml-1.5 mr-1.5 border-b border-solid border-black text-xs leading-none md:text-base"
-    >
-      Life Expectancy
-    </p>
-    <div
-      class="mx-1 mt-0.5 flex h-full max-h-7 items-center justify-center rounded-3xl bg-white text-xs md:mx-0.5 md:text-base"
+  <ul>
+    <li
+      class="flex h-full w-full flex-col"
     >
       <p
-        class="leading-none"
+        class="ml-1.5 mr-1.5 border-b border-solid border-black text-xs leading-none md:text-base"
       >
-        12 - 15 years
+        Life Expectancy
       </p>
-    </div>
-  </div>
+      <div
+        class="mx-1 mt-0.5 flex h-full max-h-7 items-center justify-center rounded-3xl bg-white text-xs md:mx-0.5 md:text-base"
+      >
+        <p
+          class="leading-none"
+        >
+          12 - 15 years
+        </p>
+      </div>
+    </li>
+  </ul>
 </div>
 `;

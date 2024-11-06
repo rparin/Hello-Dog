@@ -12,7 +12,7 @@ export default function InfoContainer({
 }) {
   const barItems = info.map((item) => {
     return (
-      <Infobar className="md:mb-1" key={item.name} barValue={item}></Infobar>
+      <Infobar className="md:pb-1" key={item.name} barValue={item}></Infobar>
     );
   });
 
@@ -22,11 +22,14 @@ export default function InfoContainer({
         "flex h-full w-full flex-col items-center bg-accent text-black",
         className
       )}>
-      <h1 className="text-base leading-none md:mb-0.5 md:text-xl">{title}</h1>
+      <h2 className="text-base leading-none md:mb-0.5 md:text-xl">{title}</h2>
 
-      <div className="hide-scrollbar flex h-full w-full flex-col overflow-auto">
+      <ul
+        tabIndex={0}
+        aria-label={`${title}`}
+        className="hide-scrollbar flex h-full w-full flex-col overflow-auto">
         {barItems}
-      </div>
+      </ul>
     </div>
   );
 }
