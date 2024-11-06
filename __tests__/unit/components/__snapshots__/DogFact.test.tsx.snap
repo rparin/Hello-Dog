@@ -49,7 +49,7 @@ exports[`it renders component unchanged 1`] = `
       Random Dog Fact
     </h1>
     <p
-      class="mx-2 text-sm leading-none md:mx-3 lg:mx-4 lg:text-base"
+      class="mx-2 line-clamp-1 text-sm leading-none md:mx-3 lg:mx-4 lg:text-base"
     >
       Tired puppies get cranky just like little kids. If you have a fussy puppy, try nap time.
     </p>
