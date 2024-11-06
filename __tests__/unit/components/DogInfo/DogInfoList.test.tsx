@@ -1,7 +1,7 @@
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
 import { axe, toHaveNoViolations } from "jest-axe";
-import InfoContainer from "@/components/Info-Container/InfoContainer";
+import InfoContainer from "@/components/DogInfo/DogInfoList";
 
 const PROPS = {
   title: "Physical Stats",

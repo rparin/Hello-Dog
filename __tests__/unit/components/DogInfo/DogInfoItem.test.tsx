@@ -1,7 +1,7 @@
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
 import { axe, toHaveNoViolations } from "jest-axe";
-import Infobar from "@/components/Info-Container/Infobar";
+import DogInfoItem from "@/components/DogInfo/DogInfoItem";
 
 const PROPS = {
   name: "Life Expectancy",
@@ -13,7 +13,7 @@ const PROPS = {
 test("it renders component unchanged", () => {
   const { container } = render(
     <ul>
-      <Infobar barValue={PROPS}></Infobar>
+      <DogInfoItem dogInfo={PROPS}></DogInfoItem>
     </ul>
   );
   expect(container).toMatchSnapshot();
@@ -22,7 +22,7 @@ test("it renders component unchanged", () => {
 test("it shows Infobar name", () => {
   render(
     <ul>
-      <Infobar barValue={PROPS}></Infobar>
+      <DogInfoItem dogInfo={PROPS}></DogInfoItem>
     </ul>
   );
   const infobarNameElement = screen.getByText(PROPS.name);
@@ -32,7 +32,7 @@ test("it shows Infobar name", () => {
 test("it shows Infobar other value", () => {
   render(
     <ul>
-      <Infobar barValue={PROPS}></Infobar>
+      <DogInfoItem dogInfo={PROPS}></DogInfoItem>
     </ul>
   );
   const infobarValueElement = screen.getByText(PROPS.value.other);
@@ -43,7 +43,7 @@ expect.extend(toHaveNoViolations);
 test("should have no accessibility violations", async () => {
   const { container } = render(
     <ul>
-      <Infobar barValue={PROPS}></Infobar>
+      <DogInfoItem dogInfo={PROPS}></DogInfoItem>
     </ul>
   );
   const results = await axe(container);

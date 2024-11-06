@@ -1,32 +1,32 @@
-import { cn } from "@/lib/utils";
 import Image from "next/image";
+import { cn } from "@/lib/utils";
 import { maleIcon, femaleIcon } from "@/constants/images";
 
-export type infoBarType = {
+export type dogInfoType = {
   name: string;
   value: { male?: string; female?: string; other?: string };
 };
 
 export default function Infobar({
   className,
-  barValue,
+  dogInfo,
 }: {
   className?: string;
-  barValue: infoBarType;
+  dogInfo: dogInfoType;
 }) {
-  var info = barValue.value.other;
+  var info = dogInfo.value.other;
   var info2;
   if (!info) {
-    info = barValue.value.male;
-    if (barValue.value.male != barValue.value.female) {
-      info2 = barValue.value.female;
+    info = dogInfo.value.male;
+    if (dogInfo.value.male != dogInfo.value.female) {
+      info2 = dogInfo.value.female;
     }
   }
 
   return (
     <li className={cn("flex h-full w-full flex-col", className)}>
       <p className="ml-1.5 mr-1.5 border-b border-solid border-black text-xs leading-none md:text-base">
-        {barValue.name}
+        {dogInfo.name}
       </p>
       <div className="mx-1 mt-0.5 flex h-full max-h-7 items-center justify-center rounded-3xl bg-white text-xs md:mx-0.5 md:text-base">
         {info2 ? (

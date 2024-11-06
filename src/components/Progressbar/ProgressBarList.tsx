@@ -1,18 +1,22 @@
 import { cn } from "@/lib/utils";
-import Infobar, { infoBarType } from "./Infobar";
+import { DogInfoItem } from "@/lib/schema/DogBreedInfo";
+import ProgressbarItem from "@/components/Progressbar/ProgressbarItem";
 
-export default function InfoContainer({
+export default function ProgressbarList({
   className,
   title,
-  info,
+  scales,
 }: {
   className?: string;
   title: string;
-  info: Array<infoBarType>;
+  scales: Array<DogInfoItem>;
 }) {
-  const barItems = info.map((item) => {
+  const barItems = scales.map((item) => {
     return (
-      <Infobar className="md:pb-1" key={item.name} barValue={item}></Infobar>
+      <ProgressbarItem
+        className="md:pb-1"
+        key={item.name}
+        barInfo={item}></ProgressbarItem>
     );
   });
 
@@ -22,8 +26,7 @@ export default function InfoContainer({
         "flex h-full w-full flex-col items-center bg-accent text-black",
         className
       )}>
-      <h2 className="text-base leading-none md:mb-0.5 md:text-xl">{title}</h2>
-
+      <h2 className="text-base leading-none md:text-xl">{title}</h2>
       <ul
         tabIndex={0}
         aria-label={`${title}`}

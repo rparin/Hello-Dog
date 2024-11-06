@@ -1,22 +1,21 @@
 import { cn } from "@/lib/utils";
-import Progressbar from "./Progressbar";
-import { DogInfoScale } from "@/lib/schema/DogBreedInfo";
+import DogInfoItem, { dogInfoType } from "@/components/DogInfo/DogInfoItem";
 
-export default function ScaleContainer({
+export default function DogInfoList({
   className,
   title,
-  scales,
+  info,
 }: {
   className?: string;
   title: string;
-  scales: Array<DogInfoScale>;
+  info: Array<dogInfoType>;
 }) {
-  const barItems = scales.map((item) => {
+  const barItems = info.map((item) => {
     return (
-      <Progressbar
+      <DogInfoItem
         className="md:pb-1"
         key={item.name}
-        barValue={item}></Progressbar>
+        dogInfo={item}></DogInfoItem>
     );
   });
 
@@ -26,7 +25,8 @@ export default function ScaleContainer({
         "flex h-full w-full flex-col items-center bg-accent text-black",
         className
       )}>
-      <h2 className="text-base leading-none md:text-xl">{title}</h2>
+      <h2 className="text-base leading-none md:mb-0.5 md:text-xl">{title}</h2>
+
       <ul
         tabIndex={0}
         aria-label={`${title}`}
