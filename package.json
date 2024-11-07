@@ -13,7 +13,8 @@
     "prettier-check": "npx prettier . --check",
     "prepare": "husky",
     "test": "cross-env NODE_ENV=test jest __tests__",
-    "test:watch": "cross-env NODE_ENV=test jest --watch __tests__"
+    "test:watch": "cross-env NODE_ENV=test jest --watch __tests__",
+    "jest": "jest"
   },
   "dependencies": {
     "@types/jest-axe": "^3.5.9",
