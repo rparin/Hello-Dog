@@ -13,7 +13,7 @@ import { webLogo } from "@/constants/images";
 import { getDogBreedInfo } from "@/lib/actions/DogBreedInfo";
 import { getCeoDogImage } from "@/lib/actions/DogImageCeo";
 
-export default async function dogResults({
+export default async function DogBreed({
   params,
 }: {
   params: { dogBreed: string };

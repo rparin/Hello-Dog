@@ -5,7 +5,7 @@ import { SEARCH_PLACEHOLDER } from "@constants/webInfo";
 import Border from "@/components/Border";
 import SearchAutoComplete from "@/components/SearchAutoComplete";
 
-export default function Home() {
+export default function App() {
   return (
     <main>
       <Border>
