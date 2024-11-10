@@ -1,5 +1,6 @@
 "server-only";
 import { DogImageCeoSchema } from "../schema/DogImageCeo";
+import { fromError } from "zod-validation-error";
 
 export async function getCeoDogImage(breedUrl: string) {
   var res;
@@ -25,7 +26,7 @@ export async function getCeoDogImage(breedUrl: string) {
   const result = DogImageCeoSchema.safeParse(data);
   if (!result.success) {
     throw new Error("Dog Ceo Image: Invalid API Response format", {
-      cause: result.error,
+      cause: fromError(result.error).toString(),
     });
   } else {
     return await result.data;

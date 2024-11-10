@@ -1,5 +1,6 @@
 "server-only";
 import { parsedEnv } from "@env/env";
+import { fromError } from "zod-validation-error";
 import { DogBreedInfoSchema } from "../schema/DogBreedInfo";
 
 export async function getDogBreedInfo(breedName: string) {
@@ -30,7 +31,7 @@ export async function getDogBreedInfo(breedName: string) {
   const result = DogBreedInfoSchema.safeParse(data);
   if (!result.success) {
     throw new Error("Dog Breed Info: Invalid API Response format", {
-      cause: result.error,
+      cause: fromError(result.error).toString(),
     });
   } else {
     return result.data[0];
