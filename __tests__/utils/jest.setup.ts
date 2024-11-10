@@ -1,3 +1,5 @@
+require("jest-fetch-mock").enableMocks();
+
 jest.mock("next/navigation", () => ({
   useRouter() {
     return {
