@@ -1,5 +1,6 @@
 "server-only";
 import { DogFactSchema } from "../schema/DogFact";
+import { fromError } from "zod-validation-error";
 
 export async function getDogFact() {
   var res;
@@ -26,7 +27,7 @@ export async function getDogFact() {
   const result = DogFactSchema.safeParse(data);
   if (!result.success) {
     throw new Error("Dog Fact: Invalid API Response format", {
-      cause: result.error,
+      cause: fromError(result.error).toString(),
     });
   } else {
     return result.data.data[0].attributes.body;
