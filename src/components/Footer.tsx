@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 
 export default function Footer(props: { className?: string }) {
   return (
-    <section
+    <footer
       className={cn(
         "z-50 mx-auto flex w-full items-center justify-center gap-0.5",
         props.className
@@ -17,6 +17,6 @@ export default function Footer(props: { className?: string }) {
         rel="noopener noreferrer">
         <ExternalLink className="mb-2 h-[.7rem] w-auto" />
       </a>
-    </section>
+    </footer>
   );
 }

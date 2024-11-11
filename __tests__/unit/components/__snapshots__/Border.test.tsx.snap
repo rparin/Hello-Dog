@@ -8,7 +8,7 @@ exports[`it renders component unchanged 1`] = `
     <div
       class="h-full w-full overflow-auto rounded-[20px] rounded-b-[20px] bg-innerBg md:rounded-b-[10px]"
     />
-    <section
+    <footer
       class="z-50 mx-auto flex w-full items-center justify-center gap-0.5 pt-1 text-black opacity-70 md:pt-3.5"
     >
       <p
@@ -45,7 +45,7 @@ exports[`it renders component unchanged 1`] = `
           />
         </svg>
       </a>
-    </section>
+    </footer>
   </div>
 </div>
 `;

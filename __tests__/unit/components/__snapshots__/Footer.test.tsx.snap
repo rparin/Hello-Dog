@@ -2,7 +2,7 @@
 
 exports[`it renders component unchanged 1`] = `
 <div>
-  <section
+  <footer
     class="z-50 mx-auto flex w-full items-center justify-center gap-0.5"
   >
     <p
@@ -39,6 +39,6 @@ exports[`it renders component unchanged 1`] = `
         />
       </svg>
     </a>
-  </section>
+  </footer>
 </div>
 `;
