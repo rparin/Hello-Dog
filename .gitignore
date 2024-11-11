@@ -79,4 +79,7 @@ Server/logs
 build/
 !**/src/main/**/build/
 !**/src/test/**/build/
+
+#Other
+.swc
 .eslintcache
