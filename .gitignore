@@ -83,7 +83,8 @@ build/
 #Other
 .swc
 .eslintcache
-node_modules/
+
+#Playwright
 /test-results/
 /playwright-report/
 /blob-report/
