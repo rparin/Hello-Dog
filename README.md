@@ -29,6 +29,7 @@ A website that brings you interesting dog facts, stunning dog images, and detail
 
 - Dog Breed Info: Get information on a specific breed of dog
 - Data Caching: Utilizes NextJs to cache recent queries, reducing load times
+- Automated E2E Test Execution: Runs and Publishes Playwright E2E tests on predefined workflows.
 
 ## Technologies
 
