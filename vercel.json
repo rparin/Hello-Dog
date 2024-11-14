@@ -1,0 +1,9 @@
+{
+  "git": {
+    "deploymentEnabled": {
+      "main": true,
+      "SpringBoot": false,
+      "playwright-report": false
+    }
+  }
+}
