@@ -36,3 +36,4 @@ jobs:
           FOLDER: playwright-report/ # The directory where your assets are generated
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub will automatically add this - you don't need to bother getting a token
           MESSAGE: "update report" # The commit message
+          CLEAR_GLOBS_FILE: "clear-ignore-files.txt" #https://github.com/s0/git-publish-subdir-action?tab=readme-ov-file#custom-clear-operations
