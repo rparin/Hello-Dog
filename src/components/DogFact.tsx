@@ -35,7 +35,9 @@ export default async function DogFact({ className }: { className?: string }) {
       <h1 className="mx-2 text-start text-base leading-none underline md:mx-3 lg:text-center lg:text-xl xl:mb-0.5">
         Random Dog Fact
       </h1>
-      <p className="mx-2 line-clamp-1 text-sm leading-none md:mx-3 lg:mx-4 lg:text-base">
+      <p
+        data-testid="random-dog-fact"
+        className="mx-2 line-clamp-1 text-sm leading-none md:mx-3 lg:mx-4 lg:text-base">
         {dogFact}
       </p>
     </div>
