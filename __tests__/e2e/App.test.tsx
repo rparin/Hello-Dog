@@ -1,15 +1,10 @@
 import { test, expect } from "@playwright/test";
+import { PAGE } from "@test-utils/playwright.utils";
 import { APP_NAME, CR, SEARCH_PLACEHOLDER } from "@/constants/webInfo";
-
-const PAGE =
-  process.env.NODE_ENV == "test"
-    ? process.env.NEXT_PUBLIC_CLIENT_URL
-    : "https://hello-dog.vercel.app";
 
 test.describe("Home Page", () => {
   test.beforeEach(async ({ page }) => {
     await page.goto(`${PAGE}`);
-    page.waitForLoadState("domcontentloaded");
   });
 
   test("it should have the correct title", async ({ page }) => {

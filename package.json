@@ -15,7 +15,7 @@
     "test": "cross-env NODE_ENV=test jest __tests__",
     "test:watch": "cross-env NODE_ENV=test jest --watch __tests__",
     "jest": "jest",
-    "playwright": "cross-env NODE_ENV=test npx playwright test --headed",
+    "playwright": "cross-env NODE_ENV=test npx playwright test",
     "playwright-ui": "cross-env NODE_ENV=test npx playwright test --ui --headed --workers 1"
   },
   "dependencies": {
