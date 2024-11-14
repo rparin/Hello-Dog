@@ -5,7 +5,7 @@
 ### [Playwright Report][Report-url]
 
 <p align="left">
-This repository contains an automated end-to-end (E2E) test report generated using Playwright, a robust framework for testing web applications. The report provides comprehensive insights into the test suite’s performance and execution details, capturing test results, logs, screenshots, and videos (if enabled) to aid in debugging and analysis.
+This branch contains an automated end-to-end (E2E) test report generated using Playwright, a robust framework for testing web applications. The report provides comprehensive insights into the test suite’s performance and execution details, capturing test results, logs, screenshots, and videos (if enabled) to aid in debugging and analysis.
 </p>
 
 </div>
