@@ -2,3 +2,4 @@
 !.git
 !.gitignore
 !vercel.json
+!README.md
