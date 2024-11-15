@@ -4,11 +4,9 @@ on:
   push:
     branches: [main, master]
     paths:
-      - "**/*.js"
-      - "**/*.html"
-      - "**/*.css"
-      - "**/*.ts"
-      - "**/*.tsx"
+      - "src/**/*"
+      - "__tests__/unit/**/*"
+      - "__tests__/integration/**/*"
   pull_request:
     branches: [main, master]
 

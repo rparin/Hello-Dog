@@ -61,7 +61,7 @@
     "typescript": "^5"
   },
   "lint-staged": {
-    "**/*.{js,ts,tsx}": [
+    "src/**/*.{js,ts,tsx}": [
       "eslint --cache --fix",
       "npm run jest -- smoke.test.tsx"
     ],
