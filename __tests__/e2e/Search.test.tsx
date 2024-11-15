@@ -14,15 +14,11 @@ test.beforeEach(async ({ page }) => {
 });
 
 test.describe("Search for both types of corgi", () => {
-  test.beforeEach(async ({ page }) => {
-    await page.goto(`${PAGE}`);
-  });
-
   test("it should search for corgi and press enter", async ({ page }) => {
     await expect(page).toHaveTitle(APP_NAME);
 
     const searchBar = page.getByPlaceholder(SEARCH_PLACEHOLDER);
-    await expect(searchBar).toBeVisible();
+    await expect(searchBar).toBeInViewport();
 
     await searchBar.fill("corgi");
     await page.waitForTimeout(1000);
@@ -38,7 +34,7 @@ test.describe("Search for both types of corgi", () => {
     await expect(page).toHaveTitle(APP_NAME);
 
     const searchBar = page.getByPlaceholder(SEARCH_PLACEHOLDER);
-    await expect(searchBar).toBeVisible();
+    await expect(searchBar).toBeInViewport();
 
     //Select the 2nd option from the search bar drop down menu
     await searchBar.fill("corgi");
@@ -62,7 +58,7 @@ test("it should search for corgi, shiba, then go back to home page", async ({
   //Corgi Search
   const searchBar = page.getByPlaceholder(SEARCH_PLACEHOLDER);
   await expect(searchBar).toBeFocused();
-  await expect(searchBar).toBeVisible();
+  await expect(searchBar).toBeInViewport();
   await searchBar.fill("corgi");
   await page.waitForTimeout(1000);
   await page.keyboard.press("Enter");
