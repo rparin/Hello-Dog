@@ -19,6 +19,8 @@ A website that brings you interesting dog facts, stunning dog images, and detail
 
 <div align="center">
 
+#### [Playwright Report][Report-url]
+
 <img max-height=350 height=350 alt="demo of Hello-Dog website" src="https://raw.githubusercontent.com/rparin/Hello-Dog/main/_preview/Demo.gif">
 
 #### [Website][Website-url]
@@ -29,6 +31,7 @@ A website that brings you interesting dog facts, stunning dog images, and detail
 
 - Dog Breed Info: Get information on a specific breed of dog
 - Data Caching: Utilizes NextJs to cache recent queries, reducing load times
+- Automated E2E Test Execution: Runs and [Publishes Playwright E2E tests][Report-Repo-url] on predefined workflows.
 
 ## Technologies
 
@@ -70,5 +73,8 @@ This project is licensed under the MIT License - see the [LICENSE][git-license-u
 [docker-url]: https://www.docker.com/
 [docker-io]: https://img.shields.io/badge/Docker-FFFFFF.svg?style=for-the-badge&logo=Docker&logoColor=1d63ed
 [Website-url]: https://hello-dog.vercel.app/
+[Report-url]: https://rparin.github.io/Hello-Dog
+[Report-Repo-url]: https://github.com/rparin/Hello-Dog/tree/playwright-report
+
 
 <!-- Badges: https://simpleicons.org or https://github.com/simple-icons/simple-icons/blob/master/slugs.md -->
