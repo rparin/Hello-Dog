@@ -85,6 +85,10 @@ build/
 .eslintcache
 
 #Playwright
+Client/test-results/
+Client/playwright-report/
+Client/blob-report/
+Client/playwright/.cache/
 /test-results/
 /playwright-report/
 /blob-report/
