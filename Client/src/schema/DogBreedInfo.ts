@@ -29,12 +29,10 @@ export const DogBreedInfoSchema = z.strictObject({
   minWeightFemale: z.number(),
 });
 
-export const DogInfoScaleSchema = z.strictObject({
+export const DogInfoItemSchema = z.strictObject({
   name: z.string(),
   value: DogInfoValueSchema,
 });
 
-export type DogInfoScale = z.infer<typeof DogInfoScaleSchema>;
-
-export type DogBreedInfoValue = z.infer<typeof DogBreedInfoSchema>;
+export type DogInfoItem = z.infer<typeof DogInfoItemSchema>;
 export type DogInfoValue = z.infer<typeof DogInfoValueSchema>;
