@@ -63,7 +63,7 @@
   "lint-staged": {
     "src/**/*.{js,ts,tsx}": [
       "eslint --cache --fix",
-      "npm run jest -- smoke.test.tsx"
+      "cross-env NODE_ENV=test jest -- smoke.test.tsx"
     ],
     "**/*.{js,css,md,ts,tsx}": "prettier --write"
   }
