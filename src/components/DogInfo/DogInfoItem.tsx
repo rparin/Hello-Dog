@@ -1,5 +1,5 @@
+import cn from "@/utils/cn";
 import Image from "next/image";
-import { cn } from "@/lib/utils";
 import { maleIcon, femaleIcon } from "@/constants/images";
 
 export type dogInfoType = {

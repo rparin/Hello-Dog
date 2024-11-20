@@ -1,6 +1,6 @@
-import { cn } from "@/lib/utils";
-import { DogInfoItem } from "@/lib/schema/DogBreedInfo";
+import cn from "@/utils/cn";
 import ProgressbarItem from "@/components/Progressbar/ProgressbarItem";
+import { DogInfoItem } from "@/schema/DogBreedInfo";
 
 export default function ProgressbarContainer({
   className,

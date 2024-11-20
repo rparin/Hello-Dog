@@ -1,6 +1,6 @@
+import cn from "@/utils/cn";
 import { CR } from "@/constants/webInfo";
 import { ExternalLink } from "lucide-react";
-import { cn } from "@/lib/utils";
 
 export default function Footer(props: { className?: string }) {
   return (

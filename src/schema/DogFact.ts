@@ -8,6 +8,6 @@ export const DogFactSchema = z.object({
       attributes: z.object({
         body: z.string(),
       }),
-    }),
+    })
   ),
 });

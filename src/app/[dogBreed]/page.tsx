@@ -4,14 +4,14 @@ import Border from "@/components/Border";
 import DogImg from "@/components/DogImg";
 import DogFact from "@/components/DogFact";
 import LostDog from "@/components/LostDog";
+import getRandItem from "@/utils/getRandItem";
 import DogInfoContainer from "@/components/DogInfo/DogInfoContainer";
 import SearchAutoComplete from "@/components/SearchAutoComplete";
 import ProgressbarContainer from "@/components/Progressbar/ProgressBarContainer";
 import { DogCeoTable } from "@data/DogCeoTable";
-import { getRandItem } from "@/lib/utils";
 import { webLogo } from "@/constants/images";
-import { getDogBreedInfo } from "@/lib/actions/DogBreedInfo";
-import { getCeoDogImage } from "@/lib/actions/DogImageCeo";
+import { getDogBreedInfo } from "@/actions/DogBreedInfo";
+import { getCeoDogImage } from "@/actions/DogImageCeo";
 
 export default async function DogBreed({
   params,

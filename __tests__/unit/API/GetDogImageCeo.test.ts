@@ -1,5 +1,5 @@
 import fetch from "jest-fetch-mock";
-import { getCeoDogImage } from "@/lib/actions/DogImageCeo";
+import { getCeoDogImage } from "@/actions/DogImageCeo";
 
 const BREED_URL = "corgi";
 const DOG_IMAGE_DATA = {

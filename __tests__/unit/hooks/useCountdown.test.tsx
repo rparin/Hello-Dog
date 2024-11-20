@@ -1,5 +1,5 @@
 import { act, renderHook } from "@testing-library/react";
-import { useCountdown } from "@/lib/hooks/useCountdown";
+import { useCountdown } from "@/hooks/useCountdown";
 
 describe("testing useCountdown hook", () => {
   beforeEach(() => {

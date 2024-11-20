@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils";
+import cn from "@/utils/cn";
 import DogInfoItem, { dogInfoType } from "@/components/DogInfo/DogInfoItem";
 
 export default function DogInfoContainer({

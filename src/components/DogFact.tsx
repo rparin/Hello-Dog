@@ -1,7 +1,7 @@
-import { cn } from "@/lib/utils";
+import cn from "@/utils/cn";
+import delay from "@/utils/delay";
 import { ExternalLink } from "lucide-react";
-import { getDogFact } from "@/lib/actions/DogFact";
-import { delay } from "@/lib/utils";
+import { getDogFact } from "@/actions/DogFact";
 
 export default async function DogFact({ className }: { className?: string }) {
   var dogFact =

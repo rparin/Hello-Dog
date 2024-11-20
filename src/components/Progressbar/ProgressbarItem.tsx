@@ -1,5 +1,5 @@
-import { cn } from "@/lib/utils";
-import { DogInfoItem } from "@/lib/schema/DogBreedInfo";
+import cn from "@/utils/cn";
+import { DogInfoItem } from "@/schema/DogBreedInfo";
 
 export default function ProgressbarItem({
   className,

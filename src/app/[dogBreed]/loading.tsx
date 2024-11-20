@@ -1,6 +1,6 @@
 import Border from "@/components/Border";
+import getRandItem from "@/utils/getRandItem";
 import { LoadingText } from "@data/LoadingText";
-import { getRandItem } from "@/lib/utils";
 
 export default function loading() {
   return (

@@ -1,6 +1,6 @@
 "use client";
 import { useRouter } from "next/navigation";
-import { useCountdown } from "@/lib/hooks/useCountdown";
+import { useCountdown } from "@/hooks/useCountdown";
 
 export default function CountdownNavigateTo(props: {
   href: string;

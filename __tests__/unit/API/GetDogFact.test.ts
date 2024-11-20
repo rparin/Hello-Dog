@@ -1,5 +1,5 @@
 import fetch from "jest-fetch-mock";
-import { getDogFact } from "@/lib/actions/DogFact";
+import { getDogFact } from "@/actions/DogFact";
 
 const DOG_FACT =
   "Tired puppies get cranky just like little kids. If you have a fussy puppy, try nap time.";
