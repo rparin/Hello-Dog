@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it renders component unchanged 1`] = `
+<div>
+  <div
+    class="h-dvh rounded-[30px] rounded-b-[50px] bg-border p-[10px] pb-[30px] md:rounded-[45px] md:rounded-b-[50px] md:p-[25px] md:pb-[50px]"
+  >
+    <main
+      class="w-full overflow-auto rounded-[20px] rounded-b-[20px] bg-innerBg md:rounded-b-[10px] relative flex h-full flex-col items-center justify-center gap-0 text-center"
+    >
+      <img
+        alt="Lost Dog poster"
+        data-nimg="fill"
+        decoding="async"
+        fetchpriority="high"
+        sizes="100vw"
+        src="/_next/image?url=%2Fimg.jpg&w=3840&q=75"
+        srcset="/_next/image?url=%2Fimg.jpg&w=640&q=75 640w, /_next/image?url=%2Fimg.jpg&w=750&q=75 750w, /_next/image?url=%2Fimg.jpg&w=828&q=75 828w, /_next/image?url=%2Fimg.jpg&w=1080&q=75 1080w, /_next/image?url=%2Fimg.jpg&w=1200&q=75 1200w, /_next/image?url=%2Fimg.jpg&w=1920&q=75 1920w, /_next/image?url=%2Fimg.jpg&w=2048&q=75 2048w, /_next/image?url=%2Fimg.jpg&w=3840&q=75 3840w"
+        style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+      />
+      <h1
+        class="absolute bottom-0 w-full bg-border pt-1 leading-none text-black/80"
+      >
+        <a
+          aria-label="Link to home page"
+          class="underline"
+          href="/"
+        >
+          Returning to the home page in:
+        </a>
+        <span
+          class="pl-1 no-underline"
+        >
+          5
+        </span>
+      </h1>
+    </main>
+    <footer
+      class="z-50 mx-auto flex w-full items-center justify-center gap-0.5 pt-1 text-black opacity-70 md:pt-3.5"
+    >
+      <p
+        class="line-clamp-1 overflow-auto text-sm"
+      >
+        ©️ 2024. Designed and Developed by Ralph Parin.
+      </p>
+      <a
+        aria-label="Github Source Code"
+        href="https://github.com/rparin/Hello-Dog/tree/SpringBoot"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <svg
+          class="lucide lucide-external-link mb-2 h-[.7rem] w-auto"
+          fill="none"
+          height="24"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M15 3h6v6"
+          />
+          <path
+            d="M10 14 21 3"
+          />
+          <path
+            d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+          />
+        </svg>
+      </a>
+    </footer>
+  </div>
+</div>
+`;

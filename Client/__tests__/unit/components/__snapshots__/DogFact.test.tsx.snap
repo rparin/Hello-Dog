@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it renders component unchanged 1`] = `
+<div>
+  <div
+    class="relative flex h-full flex-col justify-center text-start text-black md:gap-0.5 lg:gap-1"
+  >
+    <div
+      class="absolute right-3 top-0.5 z-50 flex w-full justify-end gap-1 text-xs opacity-60 lg:right-5"
+    >
+      <p
+        class="leading-none"
+      >
+        Powered by Stratonauts Dog API
+      </p>
+      <a
+        aria-label="Stratonauts Dog API"
+        href="https://dogapi.dog"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <svg
+          class="lucide lucide-external-link h-[.6rem] w-auto"
+          fill="none"
+          height="24"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M15 3h6v6"
+          />
+          <path
+            d="M10 14 21 3"
+          />
+          <path
+            d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+          />
+        </svg>
+      </a>
+    </div>
+    <h1
+      class="mx-2 text-start text-base leading-none underline md:mx-3 lg:text-center lg:text-xl xl:mb-0.5"
+    >
+      Random Dog Fact
+    </h1>
+    <p
+      class="mx-2 line-clamp-1 text-sm leading-none md:mx-3 lg:mx-4 lg:text-base"
+      data-testid="random-dog-fact"
+    >
+      Tired puppies get cranky just like little kids. If you have a fussy puppy, try nap time.
+    </p>
+  </div>
+</div>
+`;

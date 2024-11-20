@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it renders component unchanged 1`] = `
+<div>
+  <div
+    class="flex h-full w-full flex-col items-center bg-accent text-black"
+  >
+    <h2
+      class="text-base leading-none md:mb-0.5 md:text-xl"
+    >
+      Physical Stats
+    </h2>
+    <ul
+      aria-label="Physical Stats"
+      class="hide-scrollbar flex h-full w-full flex-col overflow-auto"
+      tabindex="0"
+    >
+      <li
+        class="flex h-full w-full flex-col md:pb-1"
+      >
+        <p
+          class="ml-1.5 mr-1.5 border-b border-solid border-black text-xs leading-none md:text-base"
+        >
+          Life Expectancy
+        </p>
+        <div
+          class="mx-1 mt-0.5 flex h-full max-h-7 items-center justify-center rounded-3xl bg-white text-xs md:mx-0.5 md:text-base"
+        >
+          <p
+            class="leading-none"
+          >
+            12 - 15 years
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+`;

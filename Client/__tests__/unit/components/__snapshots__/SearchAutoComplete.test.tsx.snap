@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it renders component unchanged 1`] = `
+<div>
+  <form
+    role="search"
+  >
+    <label
+      aria-label="Dog Breed Search Bar"
+    >
+      <div
+        class="sc-dcJsrY kdeOcX w-full"
+      >
+        <div
+          class="wrapper"
+        >
+          <div
+            class="sc-fqkvVR dYrfwz"
+          >
+            <input
+              data-test="search-input"
+              placeholder=""
+              spellcheck="false"
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+    </label>
+  </form>
+</div>
+`;

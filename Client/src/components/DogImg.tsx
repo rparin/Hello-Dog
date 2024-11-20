@@ -1,6 +1,6 @@
+import cn from "@/utils/cn";
 import Image from "next/image";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
-import { cn } from "@/lib/utils";
 
 export default function DogImg({
   className,

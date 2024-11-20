@@ -11,37 +11,60 @@
     "prettier-watch-no-unmatched-error": "onchange \"**/*\" -- prettier --write --no-error-on-unmatched-pattern --ignore-unknown {{changed}}",
     "prettier-watch": "onchange \"**/*\" -- prettier --write --ignore-unknown {{changed}}",
     "prettier-check": "npx prettier . --check",
-    "prepare": "husky"
+    "prepare": "husky",
+    "test": "cross-env NODE_ENV=test jest __tests__",
+    "test:watch": "cross-env NODE_ENV=test jest --watch __tests__",
+    "jest": "jest",
+    "playwright": "cross-env NODE_ENV=test npx playwright test --workers 1",
+    "playwright-ui": "cross-env NODE_ENV=test npx playwright test --ui --headed --workers 1"
   },
   "dependencies": {
+    "@types/jest-axe": "^3.5.9",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "dotenv": "^16.4.5",
     "lucide-react": "^0.383.0",
-    "next": "14.2.3",
+    "next": "^14.2.13",
     "onchange": "^7.1.0",
-    "react": "^18",
-    "react-dom": "^18",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-search-autocomplete": "^8.5.2",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7",
-    "zod": "^3.23.8"
+    "zod": "^3.23.8",
+    "zod-validation-error": "^3.4.0"
   },
   "devDependencies": {
+    "@playwright/test": "^1.48.2",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.6.2",
+    "@testing-library/react": "^16.0.1",
+    "@testing-library/user-event": "^14.5.2",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "concurrently": "^8.2.2",
+    "cross-env": "^7.0.3",
     "eslint": "^8",
-    "eslint-config-next": "14.2.3",
+    "eslint-config-next": "^14.2.13",
     "husky": "^9.0.11",
+    "jest": "^29.7.0",
+    "jest-axe": "^9.0.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "jest-fetch-mock": "^3.0.3",
     "lint-staged": "^15.2.7",
     "postcss": "^8",
     "prettier": "3.3.2",
     "prettier-plugin-tailwindcss": "^0.6.1",
     "tailwindcss": "^3.4.1",
+    "ts-node": "^10.9.2",
     "typescript": "^5"
   },
   "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown"
+    "src/**/*.{js,ts,tsx}": [
+      "eslint --cache --fix",
+      "cross-env NODE_ENV=test jest -- smoke.test.tsx"
+    ],
+    "**/*.{js,css,md,ts,tsx}": "prettier --write"
   }
 }

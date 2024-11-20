@@ -1,9 +1,20 @@
-import { cn } from "@/lib/utils";
+import cn from "@/utils/cn";
+import delay from "@/utils/delay";
 import { ExternalLink } from "lucide-react";
-import { getDogFact } from "@/lib/actions/DogFact";
+import { getDogFact } from "@/actions/DogFact";
 
 export default async function DogFact({ className }: { className?: string }) {
-  var dogFact = await getDogFact();
+  var dogFact =
+    'Upright, stiff, rapid tail movement is not wagging or "friendly" but indicates a dog who\'s rather excited and focused.';
+
+  for (let i = 0; i < 3; i++) {
+    var tempDogFact = await getDogFact();
+    if (tempDogFact.length < dogFact.length) {
+      dogFact = tempDogFact;
+      break;
+    }
+    await delay(200);
+  }
 
   return (
     <div
@@ -11,20 +22,22 @@ export default async function DogFact({ className }: { className?: string }) {
         "relative flex h-full flex-col justify-center text-start text-black md:gap-0.5 lg:gap-1",
         className
       )}>
-      <div className="absolute right-3 top-0.5 z-50 flex w-full justify-end gap-1 text-xs opacity-40 lg:right-5">
+      <div className="absolute right-3 top-0.5 z-50 flex w-full justify-end gap-1 text-xs opacity-60 lg:right-5">
         <p className="leading-none">Powered by Stratonauts Dog API</p>
         <a
           href="https://dogapi.dog"
-          aria-label="External link to Stratonauts Dog API"
+          aria-label="Stratonauts Dog API"
           target="_blank"
           rel="noopener noreferrer">
           <ExternalLink className="h-[.6rem] w-auto" />
         </a>
       </div>
-      <p className="mx-2 text-start text-base leading-none underline md:mx-3 lg:text-center lg:text-xl xl:mb-0.5">
+      <h1 className="mx-2 text-start text-base leading-none underline md:mx-3 lg:text-center lg:text-xl xl:mb-0.5">
         Random Dog Fact
-      </p>
-      <p className="mx-2 text-sm leading-none md:mx-3 lg:mx-4 lg:text-base">
+      </h1>
+      <p
+        data-testid="random-dog-fact"
+        className="mx-2 line-clamp-1 text-sm leading-none md:mx-3 lg:mx-4 lg:text-base">
         {dogFact}
       </p>
     </div>
