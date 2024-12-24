@@ -19,6 +19,7 @@
     "playwright-ui": "cross-env NODE_ENV=test npx playwright test --ui --headed --workers 1"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.4.1",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "dotenv": "^16.4.5",

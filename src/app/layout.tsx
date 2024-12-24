@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Metadata as mData } from "./metadata";
 import { Belanosima } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const font = Belanosima({ weight: "400", subsets: ["latin"], display: "swap" });
@@ -14,7 +15,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={font.className}>{children}</body>
+      <body className={font.className}>
+        {children} <Analytics />
+      </body>
     </html>
   );
 }
