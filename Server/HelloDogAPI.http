@@ -1,0 +1,6 @@
+@HelloDogAPI_HostAddress = http://localhost:5042
+
+GET {{HelloDogAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
