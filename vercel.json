@@ -1,7 +1,7 @@
 {
   "git": {
     "deploymentEnabled": {
-      "SpringBoot": false
+      "DotNet8": false
     }
   }
 }
