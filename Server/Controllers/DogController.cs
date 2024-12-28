@@ -1,7 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace DotnetAPI.controllers;
-
 [ApiController]
 [Route("/api/")]
 public class HelloDogController : ControllerBase
